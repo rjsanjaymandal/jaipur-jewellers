@@ -11,8 +11,8 @@ const Header = () => {
         </div>
         
         <div className={styles.center}>
-          <Link href="/" className={styles.logoWrapper}>
-            <img src="/logo.png" alt="Jaipur Jewellers" className={styles.logoImg} />
+          <Link href="/" className={styles.logo}>
+            JAIPUR JEWELLERS
           </Link>
         </div>
         

@@ -8,11 +8,7 @@ const Footer = () => {
         <div className={styles.top}>
           <div className={styles.brand}>
             <h2 className={styles.logo}>JAIPUR JEWELLERS</h2>
-            <p className={styles.tagline}>Exquisite Craftsmanship Since 1996</p>
-            <div className={styles.contactInfo}>
-              <p>SCO 105, Inner Market, Sector 35C, CHD</p>
-              <p>+91 90561 49264</p>
-            </div>
+            <p className={styles.tagline}>Crafting heritage since 1996.</p>
           </div>
           
           <div className={styles.links}>

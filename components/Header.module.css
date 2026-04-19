@@ -42,16 +42,13 @@
   letter-spacing: 3px;
 }
 
-.logoImg {
-  height: 60px;
-  width: auto;
-  display: block;
-}
-
-.logoWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+  color: var(--foreground);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .icons {
