@@ -85,7 +85,38 @@
   margin-top: 20px;
 }
 
+.controls {
+  position: absolute;
+  bottom: 40px;
+  right: 8%;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition-smooth);
+}
+
+.activeDot {
+  background-color: var(--primary);
+  transform: scale(1.5);
+}
+
 @media (max-width: 1024px) {
+  .controls {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 20px;
+  }
+  
   .split {
     flex-direction: column;
   }
