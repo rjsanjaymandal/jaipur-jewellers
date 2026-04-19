@@ -35,8 +35,7 @@ const CollectionsGrid = () => {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.header}>
-          <span className={styles.topline}>FEATURED COLLECTIONS</span>
-          <h2 className={styles.title}>Curated Elegance</h2>
+          <h2 className={styles.title}>EXQUISITE COLLECTIONS</h2>
         </div>
         
         <div className={styles.grid}>

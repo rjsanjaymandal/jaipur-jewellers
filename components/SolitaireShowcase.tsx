@@ -8,7 +8,6 @@ const SolitaireShowcase = () => {
     <section className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.title}>Solitaire Engagement Ring</h2>
-        <p className={styles.subtitle}>Timeless elegance in every sparkling solitaire.</p>
       </div>
       
       <div className={styles.grid}>

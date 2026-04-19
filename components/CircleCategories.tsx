@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import styles from './CircleCategories.module.css';
 
 const categories = [
-  { label: 'Best seller', image: '/best_seller.png' },
-  { label: 'New Arrival', image: '/new_arrival.png' },
-  { label: 'Silver Coins', image: '/silver_coin_placeholder.png', isPlaceholder: true },
-  { label: 'Gold Coins', image: '/gold_coin_placeholder.png', isPlaceholder: true },
+  { label: 'BEST SELLER', image: '/best_seller.png' },
+  { label: 'NEW ARRIVALS', image: '/new_arrival.png' },
+  { label: 'SILVER COINS', image: '/silver_coin_placeholder.png', isPlaceholder: true },
+  { label: 'GOLD COINS', image: '/gold_coin_placeholder.png', isPlaceholder: true },
+  { label: 'DIGITAL GOLD', image: '/digital_gold_placeholder.png', isPlaceholder: true },
 ];
 
 const CircleCategories = () => {
@@ -25,7 +26,7 @@ const CircleCategories = () => {
           >
             <div className={styles.circleWrapper}>
               {cat.isPlaceholder ? (
-                <div className={`${styles.placeholder} ${cat.label.includes('Gold') ? styles.gold : styles.silver}`}>
+                <div className={`${styles.placeholder} ${cat.label.includes('GOLD') ? styles.gold : styles.silver}`}>
                     {cat.label.split(' ')[0][0]}
                 </div>
               ) : (

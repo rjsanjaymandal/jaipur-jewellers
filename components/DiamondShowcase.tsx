@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import styles from './DiamondShowcase.module.css';
 
 const collections = [
-  { id: 1, label: 'Diamond Necklace', sub: 'Necklace Collection', image: '/bridal.png' },
-  { id: 2, label: 'Diamond Earring', sub: 'Earring Collection', image: '/daily.png' },
-  { id: 3, label: 'Diamond Mangalsutra', sub: 'Mangalsutra Collection', image: '/hero2.png' },
-  { id: 4, label: 'Diamond Ring', sub: 'Ring Collection', image: '/hero3.png' },
+  { id: 1, label: 'Diamond Necklace', image: '/diamond_necklace.jpg' },
+  { id: 2, label: 'Diamond Earring', image: '/diamond_earring.jpg' },
+  { id: 3, label: 'Diamond Mangalsutra', image: '/diamond_mangalsutra.jpg' },
+  { id: 4, label: 'Diamond Ring', image: '/diamond_ring.jpg' },
 ];
 
 const DiamondShowcase = () => {
@@ -15,7 +15,6 @@ const DiamondShowcase = () => {
     <section className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.title}>Diamond Jewellery</h2>
-        <p className={styles.subtitle}>Sparkle through the events with timeless diamonds</p>
       </div>
       
       <div className={styles.grid}>
@@ -31,9 +30,6 @@ const DiamondShowcase = () => {
             <div className={styles.card}>
               <div className={styles.imageOverlay}>
                 <img src={item.image} alt={item.label} className={styles.image} />
-                <div className={styles.innerText}>
-                  <span>{item.sub}</span>
-                </div>
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>
@@ -41,7 +37,7 @@ const DiamondShowcase = () => {
         ))}
       </div>
     </section>
-  );
+);
 };
 
 export default DiamondShowcase;
