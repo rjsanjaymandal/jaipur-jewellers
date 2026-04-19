@@ -1,0 +1,90 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(252, 249, 245, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  padding: 20px 0;
+  transition: var(--transition-smooth);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.left a, .right a {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.left a:hover, .right a:hover {
+  color: var(--primary);
+  letter-spacing: 3px;
+}
+
+.logoImg {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.iconButton:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .left, .right > a {
+    display: none;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+  }
+}

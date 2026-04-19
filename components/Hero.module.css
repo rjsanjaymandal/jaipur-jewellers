@@ -1,0 +1,106 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.split {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.imageSide {
+  flex: 1.2;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  animation: slowZoom 20s infinite alternate ease-in-out;
+}
+
+@keyframes slowZoom {
+  to {
+    transform: scale(1);
+  }
+}
+
+.textSide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+  background-color: var(--white);
+}
+
+.content {
+  max-width: 500px;
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--foreground);
+  margin-bottom: 30px;
+}
+
+.title span {
+  color: var(--primary);
+  display: block;
+}
+
+.description {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.ctaWrapper {
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .split {
+    flex-direction: column;
+  }
+  
+  .imageSide {
+    height: 60vh;
+    flex: none;
+  }
+  
+  .textSide {
+    padding: 60px 5%;
+    flex: none;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+}

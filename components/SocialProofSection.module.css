@@ -1,0 +1,123 @@
+.section {
+  padding: var(--section-padding);
+  background-color: var(--background);
+}
+
+.grid {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.testimonialsSide, .igSide {
+  flex: 1;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin-bottom: 50px;
+}
+
+.testimonialList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.testimonial {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.testimonial:last-child {
+  border-bottom: none;
+}
+
+.quote {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin-bottom: 20px;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.role {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.igGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.igItem {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.igItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.igOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.igItem:hover img {
+  transform: scale(1.1);
+}
+
+.igItem:hover .igOverlay {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
