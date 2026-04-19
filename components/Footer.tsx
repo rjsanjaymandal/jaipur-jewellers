@@ -20,11 +20,10 @@ const Footer = () => {
               <Link href="/polki">Polki</Link>
             </div>
             <div className={styles.linkGroup}>
-              <h3>Company</h3>
-              <Link href="/about">Our Story</Link>
-              <Link href="/craftsmanship">Craftsmanship</Link>
-              <Link href="/boutiques">Boutiques</Link>
-              <Link href="/contact">Contact</Link>
+              <h3>Visit Us</h3>
+              <p className={styles.contactItem}>SCO 105, Inner Market,</p>
+              <p className={styles.contactItem}>Sector 35C, CHD</p>
+              <p className={styles.contactItem}>T: +91 90561 49264</p>
             </div>
           </div>
           

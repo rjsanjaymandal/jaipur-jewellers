@@ -45,6 +45,14 @@
   gap: 15px;
 }
 
+.contactItem {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .linkGroup a {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 0.85rem;
