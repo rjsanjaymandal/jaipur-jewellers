@@ -1,13 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './CraftsmanshipSection.module.css';
 
 const CraftsmanshipSection = () => {
   return (
     <section className={styles.section}>
       <div className={styles.background}>
-        <img src="/craft_bg.png" alt="Craftsmanship Background" />
+        <Image src="/craft_bg.png" alt="Craftsmanship Background" fill style={{ objectFit: 'cover' }} />
       </div>
       
       <div className={styles.content}>
@@ -27,7 +28,7 @@ const CraftsmanshipSection = () => {
           </p>
           <p className={styles.text}>
             Our artisans dedicate hundreds of hours to a single masterpiece, ensuring that the 
-            soul of Jaipur's rich culture is preserved in every diamond, every gold thread, 
+            soul of Jaipur&apos;s rich culture is preserved in every diamond, every gold thread, 
             and every polki setting.
           </p>
           <button className={styles.storyBtn}>Read Our Story</button>

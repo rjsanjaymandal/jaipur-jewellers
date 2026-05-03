@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './CircleCategories.module.css';
 
 const categories = [
@@ -30,7 +31,7 @@ const CircleCategories = () => {
                     {cat.label.split(' ')[0][0]}
                 </div>
               ) : (
-                <img src={cat.image} alt={cat.label} className={styles.image} />
+                <Image src={cat.image} alt={cat.label} width={120} height={120} className={styles.image} style={{ objectFit: 'cover' }} />
               )}
             </div>
             <span className={styles.label}>{cat.label}</span>

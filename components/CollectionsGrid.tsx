@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './CollectionsGrid.module.css';
 
 const collections = [
@@ -49,7 +50,7 @@ const CollectionsGrid = () => {
               className={`${styles.card} ${styles[item.size]}`}
             >
               <div className={styles.imageWrapper}>
-                <img src={item.image} alt={item.title} />
+                <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
                 {item.tag && <span className={styles.badge}>{item.tag}</span>}
               </div>
               <div className={styles.info}>

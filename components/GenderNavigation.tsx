@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './GenderNavigation.module.css';
 
 const GenderNavigation = () => {
@@ -15,7 +16,7 @@ const GenderNavigation = () => {
           className={styles.card}
         >
           <div className={styles.imageWrapper}>
-            <img src="/gender_her.png" alt="For Her" />
+            <Image src="/gender_her.png" alt="For Her" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className={styles.content}>
             <h2>FOR HER</h2>
@@ -31,7 +32,7 @@ const GenderNavigation = () => {
           className={styles.card}
         >
           <div className={styles.imageWrapper}>
-            <img src="/gender_him.png" alt="For Him" />
+            <Image src="/gender_him.png" alt="For Him" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className={styles.content}>
             <h2>FOR HIM</h2>

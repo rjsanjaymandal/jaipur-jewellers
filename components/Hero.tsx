@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 const slides = [
@@ -51,7 +52,13 @@ const Hero = () => {
         >
           <div className={styles.imageSide}>
             <div className={styles.imageWrapper}>
-              <img src={slides[currentSlide].image} alt={slides[currentSlide].title} />
+              <Image 
+                src={slides[currentSlide].image} 
+                alt={slides[currentSlide].title} 
+                fill 
+                priority 
+                style={{ objectFit: 'cover' }}
+              />
             </div>
           </div>
           

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './DiamondShowcase.module.css';
 
 const collections = [
@@ -29,7 +30,7 @@ const DiamondShowcase = () => {
           >
             <div className={styles.card}>
               <div className={styles.imageOverlay}>
-                <img src={item.image} alt={item.label} className={styles.image} />
+                <Image src={item.image} alt={item.label} width={400} height={500} className={styles.image} style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>
