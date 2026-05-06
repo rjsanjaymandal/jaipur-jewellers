@@ -9,12 +9,13 @@
 
 .topBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 5%;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 .searchContainer {
@@ -42,7 +43,6 @@
 }
 
 .logoContainer {
-  flex: 2;
   text-align: center;
 }
 
@@ -54,9 +54,9 @@
 }
 
 .utility {
-  flex: 1;
+  position: absolute;
+  right: 5%;
   display: flex;
-  justify-content: flex-end;
   gap: 20px;
 }
 
