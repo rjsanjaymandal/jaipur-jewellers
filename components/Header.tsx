@@ -22,16 +22,6 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
-        <div className={styles.searchContainer}>
-          <button aria-label="Search" className={styles.iconButton}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
-          </button>
-          <input type="text" placeholder="Search our collection..." className={styles.searchInput} />
-        </div>
-        
         <div className={styles.logoContainer}>
             <Link href="/" className={styles.logo}>
                 JAIPUR JEWELLERS
