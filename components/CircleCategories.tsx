@@ -7,9 +7,7 @@ import styles from './CircleCategories.module.css';
 const categories = [
   { label: 'BEST SELLER', image: '/best_seller.png' },
   { label: 'NEW ARRIVALS', image: '/new_arrival.png' },
-  { label: 'SILVER COINS', image: '/silver_coin_placeholder.png', isPlaceholder: true },
   { label: 'GOLD COINS', image: '/gold_coin_placeholder.png', isPlaceholder: true },
-  { label: 'DIGITAL GOLD', image: '/digital_gold_placeholder.png', isPlaceholder: true },
 ];
 
 const CircleCategories = () => {
