@@ -39,8 +39,8 @@ const Header = () => {
         </div>
 
         <div className={styles.utility}>
-           <Link href="/wishlist" className={styles.utilityLink}>Wishlist</Link>
-           <Link href="/login" className={styles.utilityLink}>Login</Link>
+           <Link href="tel:+919999999999" className={styles.utilityLink}>Contact</Link>
+           <Link href="#store" className={styles.utilityLink}>Visit Us</Link>
         </div>
       </div>
 
