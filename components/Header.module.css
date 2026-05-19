@@ -74,15 +74,19 @@
 }
 
 .nav {
-  padding: 15px 0;
-  max-width: 1440px;
-  margin: 0 auto;
+  background-color: var(--background);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 15px 5%;
+  width: 100%;
 }
 
 .navList {
   display: flex;
   justify-content: center;
   gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .navLink {
@@ -90,7 +94,7 @@
   font-size: 0.75rem;
   letter-spacing: 1.5px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--foreground);
   background: none;
   border: none;
   cursor: pointer;
