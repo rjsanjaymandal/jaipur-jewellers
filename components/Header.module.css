@@ -198,3 +198,51 @@
     padding: 8px 0;
   }
 }
+
+@media (max-width: 768px) {
+  .topBar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+  }
+  
+  .utility {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .utilityLink {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    background-color: rgba(212, 175, 55, 0.03);
+  }
+  
+  .nav {
+    padding: 5px 0;
+    border-top: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .navList {
+    padding: 0 15px 8px;
+    gap: 20px;
+  }
+
+  .navLink {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+}

@@ -130,13 +130,80 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 30px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+  }
+
+  .tagline {
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .socials a {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+    text-align: center;
+  }
+
+  .linkGroup {
+    align-items: center;
+  }
+
+  .linkGroup h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+
+  .store {
+    margin-bottom: 8px;
+  }
+
   .bottom {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding-top: 30px;
   }
   
   .legal {
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 }
