@@ -3,6 +3,11 @@
   background-color: var(--background);
 }
 
+.testimonialContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .grid {
   display: flex;
   gap: 80px;

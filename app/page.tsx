@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 
 import CircleCategories from "../components/CircleCategories";
 import DiamondShowcase from "../components/DiamondShowcase";
+import GoldShowcase from "../components/GoldShowcase";
 
 import CollectionsGrid from "../components/CollectionsGrid";
 import CraftsmanshipSection from "../components/CraftsmanshipSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <CircleCategories />
       <DiamondShowcase />
+      <GoldShowcase />
       
       <CollectionsGrid />
       <CraftsmanshipSection />
