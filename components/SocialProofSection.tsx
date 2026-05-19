@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './SocialProofSection.module.css';
 
 const testimonials = [
@@ -13,10 +14,29 @@ const testimonials = [
     text: "Elegant, timeless, and sophisticated. Their modern take on traditional Jadau is simply breathtaking.",
     author: "Vikram Malhotra",
     role: "Collector"
+  },
+  {
+    text: "Exceptional quality and beautiful designs. Every piece tells a story of heritage and perfection.",
+    author: "Priya Reddy",
+    role: "Satisfied Customer"
+  },
+  {
+    text: "Their attention to detail is remarkable. I found my dream necklace here.",
+    author: "Meera Patel",
+    role: "Loyal Client"
   }
 ];
 
 const SocialProofSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className={styles.section}>
       <div className="container">
@@ -24,23 +44,35 @@ const SocialProofSection = () => {
           <span className={styles.eyebrow}>Testimonials</span>
           <h2 className={styles.title}>Valued by Connoisseurs</h2>
           
-          <div className={styles.testimonialList}>
-            {testimonials.map((t, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2, duration: 0.8 }}
-                className={styles.testimonial}
-              >
-                <p className={styles.quote}>&ldquo;{t.text}&rdquo;</p>
-                <div className={styles.authorInfo}>
-                  <span className={styles.author}>{t.author}</span>
-                  <span className={styles.role}>{t.role}</span>
-                </div>
-              </motion.div>
-            ))}
+          <div className={styles.sliderContainer}>
+            <div className={styles.sliderTrack}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -300, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className={styles.testimonialCard}
+                >
+                  <p className={styles.quote}>&ldquo;{testimonials[currentIndex].text}&rdquo;</p>
+                  <div className={styles.authorInfo}>
+                    <span className={styles.author}>{testimonials[currentIndex].author}</span>
+                    <span className={styles.role}>{testimonials[currentIndex].role}</span>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <div className={styles.dots}>
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ''}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

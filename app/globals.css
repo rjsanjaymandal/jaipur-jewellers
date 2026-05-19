@@ -1,15 +1,22 @@
 :root {
-  --background: #FCF9F5;
-  --foreground: #1A1A1A;
-  --primary: #D4AF37;
-  --primary-light: #F0E2D0;
-  --secondary: #A39181;
-  --beige-light: #F9F5F0;
+  --background: #FCF5F5;      /* Warm ivory with a soft rose/blush tint */
+  --foreground: #4A0309;      /* Deep royal burgundy-crimson for high-end text */
+  --primary: #D4AF37;         /* Bright polished royal gold */
+  --primary-light: #FCEBD7;
+  --secondary: #8E7058;       /* Warm copper/gold-brown */
+  --beige-light: #FDF9F7;
   --ivory: #FFFFFA;
-  --blush: #FDF2F2;
-  --blush-dark: #F9EBEB;
+  --blush: #FAF0F0;
+  --blush-dark: #FAF0F0;
   --white: #FFFFFF;
   --black: #000000;
+  
+  /* Themed Royal Velvet Crimson System */
+  --crimson-deep: #5A0813;    /* Core deep velvet crimson backdrop, matching inspired image background */
+  --crimson-royal: #7A0C1A;   /* Royal crimson highlight */
+  --crimson-dark: #3D0207;    /* Deepest mahogany/wine */
+  --crimson-blush: #FCF5F5;   /* Body base blush background */
+
   --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   --section-padding: 120px 5%;
   --mobile-padding: 80px 5%;

@@ -1,8 +1,9 @@
 .footer {
-  background-color: #1a1a1a;
+  background-color: var(--crimson-dark);
   color: #ffffff;
   padding: 100px 0 40px;
   font-family: var(--font-montserrat), sans-serif;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .top {
@@ -26,7 +27,7 @@
 
 .tagline {
   font-size: 0.9rem;
-  color: #999;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
 }
 
@@ -91,7 +92,7 @@
 
 .store p {
   font-size: 0.8rem;
-  color: #999;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0;
 }
 
