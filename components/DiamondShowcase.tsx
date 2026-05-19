@@ -5,10 +5,9 @@ import Image from 'next/image';
 import styles from './DiamondShowcase.module.css';
 
 const collections = [
-  { id: 1, label: 'Diamond Necklace', image: '/diamond_necklace.jpg' },
-  { id: 2, label: 'Diamond Earring', image: '/diamond_earring.jpg' },
-  { id: 3, label: 'Diamond Mangalsutra', image: '/diamond_mangalsutra.jpg' },
-  { id: 4, label: 'Diamond Ring', image: '/diamond_ring.jpg' },
+  { id: 1, label: 'Diamond Necklace', image: '/diamond_necklace_new.jpg' },
+  { id: 2, label: 'Diamond Earring', image: '/diamond_earring_new.jpg' },
+  { id: 4, label: 'Diamond Ring', image: '/diamond_ring_new.jpg' },
 ];
 
 const DiamondShowcase = () => {
