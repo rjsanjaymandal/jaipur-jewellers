@@ -50,7 +50,13 @@ const CollectionsGrid = () => {
               className={`${styles.card} ${styles[item.size]}`}
             >
               <div className={styles.imageWrapper}>
-                <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }} 
+                />
                 {item.tag && <span className={styles.badge}>{item.tag}</span>}
               </div>
               <div className={styles.info}>

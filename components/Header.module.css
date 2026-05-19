@@ -151,17 +151,50 @@
 
 @media (max-width: 1024px) {
   .topBar {
-    flex-direction: column;
-    gap: 15px;
     padding: 15px 5%;
-  }
-  
-  .navList {
-    display: none;
+    justify-content: space-between;
   }
   
   .logo {
-    font-size: 1.8rem;
-    letter-spacing: 5px;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+  }
+
+  .utility {
+    position: static;
+    gap: 15px;
+  }
+
+  .utilityLink {
+    font-size: 0.65rem;
+  }
+  
+  .nav {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .navList {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 20px 10px;
+    gap: 25px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navItem {
+    flex: 0 0 auto;
+  }
+
+  .navLink {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 8px 0;
   }
 }

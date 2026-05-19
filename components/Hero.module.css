@@ -1,105 +1,145 @@
 .hero {
-  min-height: calc(100vh - 80px);
-  width: 100%;
-  display: flex;
-  background-color: var(--background);
-  overflow: hidden;
-}
-
-.split {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-}
-
-.imageSide {
-  flex: 1.2;
-  height: calc(100vh - 80px);
   position: relative;
+  height: calc(100vh - 120px);
+  min-height: 650px;
+  width: 100%;
+  background-color: #0f0d0c;
   overflow: hidden;
 }
 
-.imageWrapper {
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.imageWrapper img {
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.backgroundImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05);
+  transform: scale(1.03);
   animation: slowZoom 20s infinite alternate ease-in-out;
 }
 
 @keyframes slowZoom {
+  from {
+    transform: scale(1.03);
+  }
   to {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 
-.textSide {
-  flex: 1;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark gold-tinted subtle overlay gradient */
+  background: linear-gradient(
+    180deg, 
+    rgba(18, 15, 13, 0.4) 0%, 
+    rgba(18, 15, 13, 0.6) 100%
+  );
+  z-index: 2;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 5%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 0 8%;
-  background-color: var(--white);
+  align-items: center;
+  text-align: center;
 }
 
 .content {
-  max-width: 500px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subtitle {
   display: block;
   font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: 4px;
-  font-size: 0.8rem;
-  color: var(--secondary);
-  margin-bottom: 20px;
+  letter-spacing: 6px;
+  font-size: 0.9rem;
+  color: var(--primary-light);
+  margin-bottom: 25px;
   text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--foreground);
-  margin-bottom: 30px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--white);
+  margin-bottom: 25px;
+  line-height: 1.25;
+  font-family: var(--font-playfair), serif;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .title span {
   color: var(--primary);
   display: block;
+  font-style: italic;
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  margin-top: 5px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .description {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 40px;
   font-weight: 300;
+  max-width: 600px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .ctaWrapper {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .controls {
   position: absolute;
   bottom: 40px;
-  right: 8%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 15px;
   z-index: 10;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 1px solid var(--primary);
-  background: none;
+  background: transparent;
   cursor: pointer;
   padding: 0;
   transition: var(--transition-smooth);
@@ -107,31 +147,28 @@
 
 .activeDot {
   background-color: var(--primary);
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
-@media (max-width: 1024px) {
-  .controls {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 20px;
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 80px);
   }
-  
-  .split {
-    flex-direction: column;
-  }
-  
-  .imageSide {
-    height: 60vh;
-    flex: none;
-  }
-  
-  .textSide {
-    padding: 60px 5%;
-    flex: none;
-  }
-  
+
   .title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
   }
 }

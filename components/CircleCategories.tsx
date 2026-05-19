@@ -7,7 +7,7 @@ import styles from './CircleCategories.module.css';
 const categories = [
   { label: 'BEST SELLER', image: '/best_seller.png' },
   { label: 'NEW ARRIVALS', image: '/new_arrival.png' },
-  { label: 'GOLD COINS', image: '/gold_coin_placeholder.png', isPlaceholder: true },
+  { label: 'GOLD COINS', image: '/gold_coin.png' },
 ];
 
 const CircleCategories = () => {
@@ -24,13 +24,14 @@ const CircleCategories = () => {
             className={styles.item}
           >
             <div className={styles.circleWrapper}>
-              {cat.isPlaceholder ? (
-                <div className={`${styles.placeholder} ${cat.label.includes('GOLD') ? styles.gold : styles.silver}`}>
-                    {cat.label.split(' ')[0][0]}
-                </div>
-              ) : (
-                <Image src={cat.image} alt={cat.label} width={120} height={120} className={styles.image} style={{ objectFit: 'cover' }} />
-              )}
+              <Image 
+                src={cat.image} 
+                alt={cat.label} 
+                width={120} 
+                height={120} 
+                className={styles.image} 
+                style={{ objectFit: 'cover' }} 
+              />
             </div>
             <span className={styles.label}>{cat.label}</span>
           </motion.div>

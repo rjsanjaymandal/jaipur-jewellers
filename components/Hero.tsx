@@ -48,21 +48,21 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
-          className={styles.split}
+          className={styles.slide}
         >
-          <div className={styles.imageSide}>
-            <div className={styles.imageWrapper}>
-              <Image 
-                src={slides[currentSlide].image} 
-                alt={slides[currentSlide].title} 
-                fill 
-                priority 
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+          <div className={styles.backgroundImage}>
+            <Image 
+              src={slides[currentSlide].image} 
+              alt={slides[currentSlide].title} 
+              fill 
+              priority 
+              sizes="100vw"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className={styles.overlay} />
           </div>
           
-          <div className={styles.textSide}>
+          <div className={styles.contentContainer}>
             <div className={styles.content}>
               <motion.span 
                 initial={{ opacity: 0, y: 20 }}
