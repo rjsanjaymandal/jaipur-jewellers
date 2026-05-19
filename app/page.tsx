@@ -5,7 +5,7 @@ import CircleCategories from "../components/CircleCategories";
 import DiamondShowcase from "../components/DiamondShowcase";
 import GoldShowcase from "../components/GoldShowcase";
 
-import CollectionsGrid from "../components/CollectionsGrid";
+
 import CraftsmanshipSection from "../components/CraftsmanshipSection";
 import SocialProofSection from "../components/SocialProofSection";
 import Footer from "../components/Footer";
@@ -20,7 +20,7 @@ export default function Home() {
       <DiamondShowcase />
       <GoldShowcase />
       
-      <CollectionsGrid />
+
       <CraftsmanshipSection />
       <SocialProofSection />
       <Footer />
