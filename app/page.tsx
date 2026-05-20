@@ -12,18 +12,21 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
-      
       <Hero />
-      <CircleCategories />
+      
+      <section aria-labelledby="categories-heading">
+        <h2 id="categories-heading" className="sr-only">Our Collections</h2>
+        <CircleCategories />
+      </section>
+      
       <DiamondShowcase />
       <GoldShowcase />
       
-
       <CraftsmanshipSection />
       <SocialProofSection />
       <Footer />
-    </main>
+    </>
   );
 }

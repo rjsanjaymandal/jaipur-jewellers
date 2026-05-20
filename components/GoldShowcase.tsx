@@ -5,16 +5,16 @@ import Image from 'next/image';
 import styles from './GoldShowcase.module.css';
 
 const collections = [
-  { id: 1, label: 'Gold Necklace', image: '/gold_necklace.png' },
-  { id: 2, label: 'Gold Earring', image: '/gold_earring.png' },
-  { id: 4, label: 'Gold Ring', image: '/gold_ring.png' },
+  { id: 1, label: 'Gold Necklace', image: '/gold_necklace.png', alt: '22K Gold Necklace Collection - Traditional & Contemporary Designs' },
+  { id: 2, label: 'Gold Earring', image: '/gold_earring.png', alt: 'Gold Earrings - Jhumka, Chandbali & Stud Designs' },
+  { id: 4, label: 'Gold Ring', image: '/gold_ring.png', alt: 'Gold Rings for Every Occasion - Daily Wear to Wedding' },
 ];
 
 const GoldShowcase = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="gold-heading">
       <div className={styles.header}>
-        <h2 className={styles.title}>Gold Jewellery</h2>
+        <h2 id="gold-heading" className={styles.title}>Gold Jewellery</h2>
       </div>
       
       <div className={styles.grid}>
@@ -31,7 +31,7 @@ const GoldShowcase = () => {
               <div className={styles.imageOverlay}>
                 <Image 
                   src={item.image} 
-                  alt={item.label} 
+                  alt={item.alt} 
                   width={400} 
                   height={500} 
                   className={styles.image} 

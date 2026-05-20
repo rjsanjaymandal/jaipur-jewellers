@@ -1,0 +1,31 @@
+# Jaipur Jewellers - robots.txt
+# Chandigarh's Premier Jewellery Store Since 1996
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jaipurjewellers.in/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Allow search engines to index images
+Allow: /public/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 10

@@ -12,6 +12,7 @@ const slides = [
     subtitle: 'ROYAL HERITAGE',
     title: 'Exquisite Artistry',
     span: 'Timeless Gold Collections',
+    alt: 'Exquisite Gold Jewellery Collection - Jaipur Jewellers Chandigarh',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const slides = [
     subtitle: 'TRADITIONAL KUNDAN',
     title: 'Heritage Revitalized',
     span: 'Artistry in Gold',
+    alt: 'Traditional Kundan Jewellery - Handcrafted Heritage Pieces',
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const slides = [
     subtitle: 'JADAU MASTERPIECES',
     title: 'Timeless Treasures',
     span: 'Handcrafted Luxury',
+    alt: 'Jadau Jewellery Masterpieces - Wedding and Bridal Collections',
   },
 ];
 
@@ -40,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} aria-label="Featured Collections Banner">
       <AnimatePresence mode="wait">
         <motion.div 
           key={slides[currentSlide].id}
@@ -49,17 +52,19 @@ const Hero = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
           className={styles.slide}
+          role="img"
+          aria-label={slides[currentSlide].alt}
         >
           <div className={styles.backgroundImage}>
             <Image 
               src={slides[currentSlide].image} 
-              alt={slides[currentSlide].title} 
+              alt={slides[currentSlide].alt} 
               fill 
               priority 
               sizes="100vw"
               style={{ objectFit: 'cover' }}
             />
-            <div className={styles.overlay} />
+            <div className={styles.overlay} aria-hidden="true" />
           </div>
           
           <div className={styles.contentContainer}>
@@ -76,7 +81,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                className={styles.title}
+                className={`${styles.title} ${styles.h1Heading}`}
               >
                 {slides[currentSlide].title} <br /> 
                 <span>{slides[currentSlide].span}</span>

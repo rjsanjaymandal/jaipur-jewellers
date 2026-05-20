@@ -5,16 +5,16 @@ import Image from 'next/image';
 import styles from './DiamondShowcase.module.css';
 
 const collections = [
-  { id: 1, label: 'Diamond Necklace', image: '/diamond_necklace_new.jpg' },
-  { id: 2, label: 'Diamond Earring', image: '/diamond_earring_new.jpg' },
-  { id: 4, label: 'Diamond Ring', image: '/diamond_ring_new.jpg' },
+  { id: 1, label: 'Diamond Necklace', image: '/diamond_necklace_new.jpg', alt: 'Premium Diamond Necklace Collection - Jaipur Jewellers Chandigarh' },
+  { id: 2, label: 'Diamond Earring', image: '/diamond_earring_new.jpg', alt: 'Exquisite Diamond Earrings - Stud, Drop & Jhumka Designs' },
+  { id: 4, label: 'Diamond Ring', image: '/diamond_ring_new.jpg', alt: 'Diamond Engagement & Wedding Rings - Solitaire & Halo Designs' },
 ];
 
 const DiamondShowcase = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="diamond-heading">
       <div className={styles.header}>
-        <h2 className={styles.title}>Diamond Jewellery</h2>
+        <h2 id="diamond-heading" className={styles.title}>Diamond Jewellery</h2>
       </div>
       
       <div className={styles.grid}>
@@ -29,7 +29,7 @@ const DiamondShowcase = () => {
           >
             <div className={styles.card}>
               <div className={styles.imageOverlay}>
-                <Image src={item.image} alt={item.label} width={400} height={500} className={styles.image} style={{ objectFit: 'cover' }} />
+                <Image src={item.image} alt={item.alt} width={400} height={500} className={styles.image} style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>
