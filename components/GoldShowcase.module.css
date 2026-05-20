@@ -1,27 +1,33 @@
 .section {
-  padding: 80px 5%;
-  background-color: var(--background); /* Soft gold-accented background contrast */
+  padding: 60px 4%;
+  background-color: var(--white);
   text-align: center;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .title {
   font-family: var(--font-playfair), serif;
-  font-size: 2.22rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--foreground);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
+.subtitle {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -29,14 +35,14 @@
 .cardWrapper {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   align-items: center;
 }
 
 .card {
   width: 100%;
   aspect-ratio: 16/10;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   background: white;
@@ -46,8 +52,8 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .imageOverlay {
@@ -69,25 +75,40 @@
 
 .caption {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--foreground);
   margin-top: 5px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 40px 4%;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   
   .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .caption {
+    font-size: 0.75rem;
   }
 }

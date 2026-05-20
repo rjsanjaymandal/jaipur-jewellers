@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 
 const navItems = [
@@ -23,14 +24,16 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.topBar}>
         <div className={styles.logoContainer}>
-            <Link href="/" className={styles.logo}>
-                JAIPUR JEWELLERS
+            <Link href="/" className={styles.logoLink}>
+                <Image 
+                  src="/logo_gold_final.png" 
+                  alt="Jaipur Jewellers Logo" 
+                  width={220} 
+                  height={75} 
+                  priority
+                  className={styles.logoImage}
+                />
             </Link>
-        </div>
-
-        <div className={styles.utility}>
-           <Link href="tel:+919999999999" className={styles.utilityLink}>Contact</Link>
-           <Link href="#store" className={styles.utilityLink}>Visit Us</Link>
         </div>
       </div>
 

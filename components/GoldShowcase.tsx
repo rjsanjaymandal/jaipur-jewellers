@@ -7,7 +7,6 @@ import styles from './GoldShowcase.module.css';
 const collections = [
   { id: 1, label: 'Gold Necklace', image: '/gold_necklace.png' },
   { id: 2, label: 'Gold Earring', image: '/gold_earring.png' },
-  { id: 3, label: 'Gold Bangle', image: '/gold_bangle.png' },
   { id: 4, label: 'Gold Ring', image: '/gold_ring.png' },
 ];
 

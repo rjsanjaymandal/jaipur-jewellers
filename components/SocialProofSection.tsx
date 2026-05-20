@@ -49,10 +49,10 @@ const SocialProofSection = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
-                  initial={{ x: 300, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: -300, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className={styles.testimonialCard}
                 >
                   <p className={styles.quote}>&ldquo;{testimonials[currentIndex].text}&rdquo;</p>

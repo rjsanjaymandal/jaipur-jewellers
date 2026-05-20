@@ -1,37 +1,39 @@
 .section {
-  padding: 60px 5%;
+  padding: 40px 0;
   background-color: var(--white);
   border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .circleWrapper {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
   background: linear-gradient(135deg, var(--primary) 0%, #F0E2D0 50%, var(--primary) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
   position: relative;
 }
 
@@ -54,9 +56,8 @@
 }
 
 .item:hover .circleWrapper {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
-  background: linear-gradient(135deg, #B8860B 0%, var(--primary) 50%, #B8860B 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
 }
 
 .item:hover .image {
@@ -65,12 +66,13 @@
 
 .label {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--foreground);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  text-align: center;
 }
 
 .item:hover .label {
@@ -79,38 +81,60 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 40px 0;
+    padding: 25px 0 20px;
+    overflow-x: hidden;
   }
   
   .container {
-    gap: 32px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 0 24px 20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    justify-content: center;
   }
-  
-  .container::-webkit-scrollbar {
-    display: none;
-  }
-  
+
   .item {
-    flex: 0 0 120px;
-    scroll-snap-align: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 0 8vw;
+    scroll-snap-align: none;
   }
   
   .circleWrapper {
-    width: 100px;
-    height: 100px;
-    padding: 4px;
+    width: 65px;
+    height: 65px;
+    padding: 3px;
+    flex-shrink: 0;
+  }
+
+  .circleWrapper::after {
+    inset: 1px;
   }
 
   .label {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    text-align: center;
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 20px 0 15px;
+  }
+
+  .item {
+    padding: 0 6vw;
+  }
+   
+  .circleWrapper {
+    width: 55px;
+    height: 55px;
+    padding: 3px;
   }
 }

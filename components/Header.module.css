@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--crimson-deep);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(180deg, var(--crimson-deep) 0%, var(--crimson-royal) 100%);
+  box-shadow: 0 2px 20px rgba(47, 1, 4, 0.3);
   transition: var(--transition-smooth);
 }
 
@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px 5%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -35,6 +35,11 @@
   width: 200px;
   transition: var(--transition-smooth);
   outline: none;
+  color: var(--foreground);
+}
+
+.searchInput::placeholder {
+  color: rgba(54, 1, 5, 0.4);
 }
 
 .searchInput:focus {
@@ -44,14 +49,30 @@
 
 .logoContainer {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  font-family: var(--font-playfair), serif;
-  font-size: 2.2rem;
-  letter-spacing: 8px;
-  color: var(--primary);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+.logoLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+  filter: brightness(1.1);
+}
+
+.logoImage {
+  max-height: 72px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.logoImage:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05) drop-shadow(0 4px 10px rgba(197, 160, 89, 0.25));
 }
 
 .utility {
@@ -66,7 +87,7 @@
   font-size: 0.7rem;
   letter-spacing: 1px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--foreground);
 }
 
 .utilityLink:hover {
@@ -74,32 +95,35 @@
 }
 
 .nav {
-  background-color: var(--background);
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 15px 5%;
+  background: linear-gradient(180deg, var(--ivory) 0%, var(--beige-light) 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 10px 0;
   width: 100%;
 }
 
 .navList {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navLink {
   text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
   font-weight: 600;
   color: var(--foreground);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 8px 4px;
   position: relative;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .navLink:after {
@@ -108,9 +132,13 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: var(--primary);
   transition: var(--transition-smooth);
+}
+
+.navLink:hover {
+  color: var(--primary);
 }
 
 .navLink:hover:after {
@@ -126,29 +154,40 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--blush-dark);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background-color: var(--crimson-dark);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   padding: 20px;
-  min-width: 200px;
+  min-width: 220px;
   z-index: 1001;
   border: 1px solid var(--primary);
-  margin-top: 10px;
+  margin-top: 12px;
+  border-radius: 4px;
 }
 
 .rateInfo {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-montserrat), sans-serif;
   font-size: 0.8rem;
-  color: var(--foreground);
+  color: var(--primary-light);
+}
+
+.rateInfo span {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding-bottom: 6px;
+}
+
+.rateInfo span:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .iconButton {
   background: none;
   border: none;
   cursor: pointer;
-  color: #FFFFFF;
+  color: var(--foreground);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,34 +195,33 @@
 
 @media (max-width: 1024px) {
   .topBar {
-    padding: 15px 5%;
-    justify-content: space-between;
+    padding: 8px 4%;
   }
   
-  .logo {
-    font-size: 1.4rem;
-    letter-spacing: 4px;
+  .logoImage {
+    max-height: 55px;
   }
 
   .utility {
     position: static;
-    gap: 15px;
+    gap: 12px;
   }
 
   .utilityLink {
     font-size: 0.65rem;
+    letter-spacing: 0.5px;
   }
   
   .nav {
-    padding: 10px 0;
+    padding: 0;
     width: 100%;
   }
 
   .navList {
     justify-content: flex-start;
     overflow-x: auto;
-    padding: 0 20px 10px;
-    gap: 25px;
+    padding: 0 16px 8px;
+    gap: 20px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -197,57 +235,66 @@
   }
 
   .navLink {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
     white-space: nowrap;
-    padding: 8px 0;
+    padding: 12px 0;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    position: relative;
+  }
+
   .topBar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px 20px;
+    flex-direction: row;
+    gap: 10px;
+    padding: 6px 16px;
     align-items: center;
-    text-align: center;
   }
   
-  .logo {
-    font-size: 1.3rem;
-    letter-spacing: 3px;
+  .logoImage {
+    max-height: 40px;
+  }
+  
+  .searchContainer {
+    display: none;
   }
   
   .utility {
     position: static;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
-    margin-top: 5px;
+    gap: 8px;
+    width: auto;
+    margin-top: 0;
   }
   
   .utilityLink {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    padding: 6px 12px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
     border-radius: 4px;
-    background-color: rgba(212, 175, 55, 0.03);
+    background-color: rgba(212, 175, 55, 0.05);
   }
   
   .nav {
-    padding: 5px 0;
-    border-top: 1px solid rgba(0,0,0,0.03);
+    padding: 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .navList {
-    padding: 0 15px 8px;
-    gap: 20px;
+    padding: 0 12px 6px;
+    gap: 14px;
   }
 
   .navLink {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
   }
 }

@@ -1,25 +1,25 @@
 :root {
-  --background: #FCF5F5;      /* Warm ivory with a soft rose/blush tint */
-  --foreground: #4A0309;      /* Deep royal burgundy-crimson for high-end text */
-  --primary: #D4AF37;         /* Bright polished royal gold */
-  --primary-light: #FCEBD7;
-  --secondary: #8E7058;       /* Warm copper/gold-brown */
-  --beige-light: #FDF9F7;
-  --ivory: #FFFFFA;
-  --blush: #FAF0F0;
-  --blush-dark: #FAF0F0;
+  --background: #FDFBF7;      /* Silky Champagne Ivory - luxury boutique feel */
+  --foreground: #360105;      /* Ultra-deep Mahogany-Burgundy for ultimate crisp readability */
+  --primary: #C5A059;         /* Sophisticated Champagne Satin Gold - warm, elegant, non-harsh */
+  --primary-light: #F7EAD7;   /* Soft gold wash */
+  --secondary: #9E7D5A;       /* Warm Jaipur Copper-Gold */
+  --beige-light: #FAF6EE;     /* Soft ivory linen */
+  --ivory: #FFFDF9;
+  --blush: #FAF5EE;
+  --blush-dark: #FAF0E4;
   --white: #FFFFFF;
   --black: #000000;
   
   /* Themed Royal Velvet Crimson System */
-  --crimson-deep: #5A0813;    /* Core deep velvet crimson backdrop, matching inspired image background */
-  --crimson-royal: #7A0C1A;   /* Royal crimson highlight */
-  --crimson-dark: #3D0207;    /* Deepest mahogany/wine */
-  --crimson-blush: #FCF5F5;   /* Body base blush background */
+  --crimson-deep: #4D0209;    /* Core deep Jaipur velvet crimson, luxurious wine-red backdrop */
+  --crimson-royal: #6D0B16;   /* Rich royal crimson highlight */
+  --crimson-dark: #2F0104;    /* Midnight mahogany wine */
+  --crimson-blush: #FDFBF7;   /* Base body background */
 
-  --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  --section-padding: 120px 5%;
-  --mobile-padding: 80px 5%;
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --section-padding: 80px 4%;
+  --mobile-padding: 60px 4%;
 }
 
 * {

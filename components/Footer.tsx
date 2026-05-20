@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -7,7 +8,17 @@ const Footer = () => {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <h2 className={styles.logo}>JAIPUR JEWELLERS</h2>
+            <div className={styles.logoContainer}>
+              <Link href="/">
+                <Image 
+                  src="/logo_gold_final.png" 
+                  alt="Jaipur Jewellers Logo" 
+                  width={200} 
+                  height={68}
+                  className={styles.logoImage}
+                />
+              </Link>
+            </div>
             <p className={styles.tagline}>A Legacy of Trust Since 1996.</p>
             <div className={styles.socials}>
                 <a href="#">Instagram</a>

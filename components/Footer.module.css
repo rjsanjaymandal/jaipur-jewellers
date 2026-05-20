@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--crimson-dark);
   color: #ffffff;
-  padding: 100px 0 40px;
+  padding: 60px 0 30px;
   font-family: var(--font-montserrat), sans-serif;
   border-top: 1px solid rgba(212, 175, 55, 0.15);
 }
@@ -9,135 +9,152 @@
 .top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
-  gap: 60px;
+  margin-bottom: 50px;
+  gap: 40px;
 }
 
 .brand {
-  flex: 1.5;
+  flex: 1.2;
 }
 
-.logo {
-  font-family: var(--font-playfair), serif;
-  font-size: 1.8rem;
-  letter-spacing: 5px;
-  color: var(--primary);
-  margin-bottom: 20px;
+.logoContainer {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoImage {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.logoImage:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(197, 160, 89, 0.3));
 }
 
 .tagline {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 30px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
 }
 
 .socials {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .socials a {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #fff;
   transition: var(--transition-smooth);
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
 .socials a:hover {
   color: var(--primary);
+  border-color: var(--primary);
 }
 
 .links {
-  flex: 3;
+  flex: 2.5;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
 }
 
 .linkGroup h3 {
   font-family: var(--font-playfair), serif;
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+  font-size: 1rem;
+  margin-bottom: 15px;
   letter-spacing: 1px;
 }
 
 .linkGroup {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .linkGroup a {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #ccc;
   transition: var(--transition-smooth);
 }
 
 .linkGroup a:hover {
   color: var(--primary);
-  transform: translateX(5px);
+  transform: translateX(3px);
 }
 
 .store {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .store strong {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--primary);
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .store p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
+  line-height: 1.4;
 }
 
 .phone {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 500;
 }
 
 .bottom {
   border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 40px;
+  padding-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #666;
 }
 
 .legal {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {
   .top {
     flex-direction: column;
-    gap: 60px;
+    gap: 30px;
+    margin-bottom: 40px;
   }
   
   .links {
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 25px;
   }
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 30px;
+    padding: 40px 0 20px;
   }
 
   .top {
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
     align-items: center;
     text-align: center;
   }
@@ -147,39 +164,44 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 16px;
   }
 
-  .logo {
-    font-size: 1.6rem;
-    letter-spacing: 4px;
-    margin-bottom: 12px;
+  .logoContainer {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logoImage {
+    max-height: 40px;
   }
 
   .tagline {
-    margin-bottom: 20px;
-    font-size: 0.85rem;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    display: none;
   }
 
   .socials {
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
   }
 
   .socials a {
-    font-size: 0.8rem;
-    padding: 8px 16px;
+    font-size: 0.65rem;
+    padding: 5px 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.02);
   }
 
   .links {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     text-align: center;
+    padding: 0 16px;
   }
 
   .linkGroup {
@@ -187,24 +209,62 @@
   }
 
   .linkGroup h3 {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+  }
+
+  .linkGroup a {
+    font-size: 0.7rem;
+    padding: 2px 0;
   }
 
   .store {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+
+  .store strong {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+  }
+
+  .store p {
+    font-size: 0.7rem;
+  }
+
+  .phone {
+    font-size: 0.75rem;
+    margin-top: 6px;
   }
 
   .bottom {
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     text-align: center;
-    padding-top: 30px;
+    padding: 20px 16px 0;
+    font-size: 0.65rem;
   }
   
   .legal {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .links {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 12px;
+  }
+
+  .linkGroup h3 {
+    font-size: 0.8rem;
+  }
+
+  .linkGroup a {
+    font-size: 0.65rem;
   }
 }

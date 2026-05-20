@@ -8,10 +8,10 @@ import styles from './Hero.module.css';
 const slides = [
   {
     id: 1,
-    image: '/hero.png',
-    subtitle: 'EST. 1996',
-    title: 'Exquisite Craftsmanship',
-    span: 'Modern Elegance',
+    image: '/hero_banner_gold.jpg',
+    subtitle: 'ROYAL HERITAGE',
+    title: 'Exquisite Artistry',
+    span: 'Timeless Gold Collections',
   },
   {
     id: 2,
