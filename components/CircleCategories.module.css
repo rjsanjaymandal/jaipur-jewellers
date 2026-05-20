@@ -81,40 +81,44 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 25px 0 20px;
+    padding: 20px 0;
     overflow-x: hidden;
   }
   
   .container {
     display: flex;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 100%;
+    flex-wrap: nowrap;
   }
 
   .item {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 0;
-    padding: 0 8vw;
+    gap: 8px;
+    padding: 0;
     scroll-snap-align: none;
   }
   
   .circleWrapper {
-    width: 65px;
-    height: 65px;
-    padding: 3px;
+    width: 70px;
+    height: 70px;
+    padding: 4px;
     flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
   }
 
   .circleWrapper::after {
-    inset: 1px;
+    inset: 2px;
   }
 
   .label {
-    display: none;
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
   }
 
   .image {
@@ -125,16 +129,22 @@
 
 @media (max-width: 480px) {
   .section {
-    padding: 20px 0 15px;
+    padding: 15px 0;
   }
 
-  .item {
-    padding: 0 6vw;
+  .container {
+    gap: 20px;
+    padding: 0 16px;
   }
    
   .circleWrapper {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     padding: 3px;
+  }
+
+  .label {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
   }
 }
