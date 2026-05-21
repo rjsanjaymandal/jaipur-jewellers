@@ -23,41 +23,26 @@ const Footer = () => {
             <div className={styles.socials}>
                 <a href="#">Instagram</a>
                 <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
             </div>
           </div>
           
           <div className={styles.links}>
             <div className={styles.linkGroup}>
-              <h3>Collections</h3>
-              <Link href="/diamond">Diamond</Link>
-              <Link href="/gold">Gold</Link>
-              <Link href="/jadau">Jadau</Link>
-              <Link href="/polki">Polki</Link>
-              <Link href="/kundan">Kundan</Link>
-            </div>
-            
-            <div className={styles.linkGroup}>
-              <h3>Visit Our Stores</h3>
+              <h3>Visit Us</h3>
               <div className={styles.store}>
-                  <strong>Main Boutique</strong>
-                  <p>SCO 105, Inner Market,</p>
-                  <p>Sector 35C, CHD</p>
-              </div>
-              <div className={styles.store}>
-                  <strong>Bridal Studio</strong>
-                  <p>SCO 12, Sector 34C,</p>
-                  <p>Chandigarh, India</p>
+                  <p>SCO 105, Sector 35C INNER MARKET</p>
+                  <p>CHANDIGARH</p>
               </div>
               <p className={styles.phone}>T: +91 90561 49264</p>
             </div>
-
+            
             <div className={styles.linkGroup}>
-                <h3>Trust & Service</h3>
-                <Link href="/virtual-tour">Virtual Tour</Link>
-                <Link href="/bespoke">Bespoke Design</Link>
-                <Link href="/blog">Our Story (Blog)</Link>
-                <Link href="/care">Jewelry Care</Link>
+              <h3>Collections</h3>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Diamond%20Jewellery" target="_blank" rel="noopener noreferrer">Diamond</a>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Gold%20Jewellery" target="_blank" rel="noopener noreferrer">Gold</a>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Jadau%20Jewellery" target="_blank" rel="noopener noreferrer">Jadau</a>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Polki%20Jewellery" target="_blank" rel="noopener noreferrer">Polki</a>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Kundan%20Jewellery" target="_blank" rel="noopener noreferrer">Kundan</a>
             </div>
           </div>
         </div>
