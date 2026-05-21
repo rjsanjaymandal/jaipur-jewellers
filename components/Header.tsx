@@ -6,20 +6,16 @@ import Image from 'next/image';
 import styles from './Header.module.css';
 
 const navItems = [
-  { label: 'DIAMOND', href: '/diamond' },
-  { label: 'GOLD', href: '/gold' },
-  { label: 'KUNDAN', href: '/kundan' },
-  { label: 'JADAU', href: '/jadau' },
-  { label: 'ITALIAN', href: '/italian' },
-  { label: 'POLKI', href: '/polki' },
-  { label: 'SILVER', href: '/silver' },
-  { label: 'RATE', href: '#', isRate: true },
-  { label: 'INVESTORS', href: '/investors' },
+  { label: 'DIAMOND', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Diamond%20Jewellery' },
+  { label: 'GOLD', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Gold%20Jewellery' },
+  { label: 'KUNDAN', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Kundan%20Jewellery' },
+  { label: 'JADAU', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Jadau%20Jewellery' },
+  { label: 'ITALIAN', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Italian%20Jewellery' },
+  { label: 'POLKI', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Polki%20Jewellery' },
+  { label: 'SILVER', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Silver%20Jewellery' },
 ];
 
 const Header = () => {
-  const [isRateOpen, setIsRateOpen] = useState(false);
-
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
@@ -41,28 +37,9 @@ const Header = () => {
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.label} className={styles.navItem}>
-              {item.isRate ? (
-                <div 
-                  className={styles.rateWrapper}
-                  onMouseEnter={() => setIsRateOpen(true)}
-                  onMouseLeave={() => setIsRateOpen(false)}
-                >
-                  <button className={styles.navLink}>{item.label}</button>
-                  {isRateOpen && (
-                    <div className={styles.rateDropdown}>
-                      <div className={styles.rateInfo}>
-                        <span>22K Gold: ₹6,641/gm</span>
-                        <span>24K Gold: ₹7,245/gm</span>
-                        <span>Silver: ₹842/10gm</span>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link href={item.href} className={styles.navLink}>
-                  {item.label}
-                </Link>
-              )}
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>

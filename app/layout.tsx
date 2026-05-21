@@ -51,7 +51,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.jaipurjewellers.in"),
   alternates: {
     canonical: "/",
   },
@@ -62,7 +61,6 @@ export const metadata: Metadata = {
     title: "Jaipur Jewellers | Premium Diamond, Gold & Jadau Jewellery | Since 1996",
     description: "Chandigarh's premier jeweller offering exquisite Diamond, Gold, Kundan, Jadau, Polki, and Italian jewellery. Handcrafted luxury collections for weddings, engagements & everyday elegance.",
     url: baseUrl,
-    siteUrl: baseUrl,
     images: [
       {
         url: "/og-image.jpg",
@@ -77,8 +75,6 @@ export const metadata: Metadata = {
         alt: "Jaipur Jewellers Logo",
       },
     ],
-    localeAlternate: [],
-    tags: ["jewellery", "diamond", "gold", "chandigarh", "jadau", "kundan", "polki", "bridal"],
   },
   twitter: {
     card: "summary_large_image",
@@ -100,16 +96,11 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-    all: ["index", "follow", "max-image-preview:large", "max-snippet:-1"],
   },
   verification: {
     google: "google-site-verification-code",
     yandex: "yandex-verification-code",
-    bing: "bing-verification-code",
   },
-  category: "Shopping",
-  classification: "Jewellery",
-  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({
