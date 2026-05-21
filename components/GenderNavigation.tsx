@@ -20,7 +20,7 @@ const GenderNavigation = () => {
           </div>
           <div className={styles.content}>
             <h2>FOR HER</h2>
-            <button className={styles.btn}>Exquisite Selection</button>
+            <button className={styles.btn} onClick={() => window.open('https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20jewellery%20for%20her', '_blank')}>Exquisite Selection</button>
           </div>
         </motion.div>
         
@@ -36,7 +36,7 @@ const GenderNavigation = () => {
           </div>
           <div className={styles.content}>
             <h2>FOR HIM</h2>
-            <button className={styles.btn}>Tailored Luxury</button>
+            <button className={styles.btn} onClick={() => window.open('https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20jewellery%20for%20him', '_blank')}>Tailored Luxury</button>
           </div>
         </motion.div>
       </div>

@@ -26,6 +26,8 @@ const DiamondShowcase = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             className={styles.cardWrapper}
+            onClick={() => window.open(`https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(item.label)}`, '_blank')}
+            style={{ cursor: 'pointer' }}
           >
             <div className={styles.card}>
               <div className={styles.imageOverlay}>

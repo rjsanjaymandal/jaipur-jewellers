@@ -5,9 +5,9 @@ import Image from 'next/image';
 import styles from './CircleCategories.module.css';
 
 const categories = [
-  { label: 'BEST SELLER', image: '/best_seller.png' },
-  { label: 'NEW ARRIVALS', image: '/new_arrival.png' },
-  { label: 'GOLD COINS', image: '/gold_coin.png' },
+  { label: 'BEST SELLER', image: '/best_seller.png', message: 'Hi%2C%20I%20am%20interested%20in%20Best%20Seller%20collections' },
+  { label: 'NEW ARRIVALS', image: '/new_arrival.png', message: 'Hi%2C%20I%20am%20interested%20in%20New%20Arrivals' },
+  { label: 'GOLD COINS', image: '/gold_coin.png', message: 'Hi%2C%20I%20am%20interested%20in%20Gold%20Coins' },
 ];
 
 const CircleCategories = () => {
@@ -22,6 +22,8 @@ const CircleCategories = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             className={styles.item}
+            onClick={() => window.open(`https://wa.me/919056149264?text=${cat.message}`, '_blank')}
+            style={{ cursor: 'pointer' }}
           >
             <div className={styles.circleWrapper}>
               <Image 

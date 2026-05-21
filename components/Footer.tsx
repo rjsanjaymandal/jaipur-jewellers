@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
@@ -9,7 +8,7 @@ const Footer = () => {
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.logoContainer}>
-              <Link href="/">
+              <a href="/">
                 <Image 
                   src="/logo_gold_final.png" 
                   alt="Jaipur Jewellers Logo" 
@@ -17,7 +16,7 @@ const Footer = () => {
                   height={60}
                   className={styles.logoImage}
                 />
-              </Link>
+              </a>
             </div>
             <p className={styles.tagline}>A Legacy of Trust Since 1996.</p>
             <div className={styles.socials}>
@@ -52,9 +51,9 @@ const Footer = () => {
         <div className={styles.bottom}>
           <p>&copy; 2026 Jaipur Jewellers. All rights reserved.</p>
           <div className={styles.legal}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms & Conditions</Link>
-            <Link href="/shipping">Shipping Policy</Link>
+            <a href="https://wa.me/919056149264?text=Hi%2C%20I%20would%20like%20to%20know%20about%20your%20Privacy%20Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://wa.me/919056149264?text=Hi%2C%20I%20would%20like%20to%20know%20about%20your%20Terms%20%26%20Conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+            <a href="https://wa.me/919056149264?text=Hi%2C%20I%20would%20like%20to%20know%20about%20your%20Shipping%20Policy" target="_blank" rel="noopener noreferrer">Shipping Policy</a>
           </div>
         </div>
       </div>

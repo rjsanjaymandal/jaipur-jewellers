@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from './CollectionsGrid.module.css';
 
@@ -62,9 +61,9 @@ const CollectionsGrid = () => {
               <div className={styles.info}>
                 <span className={styles.category}>{item.category}</span>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
-                <Link href={`/collections/${item.id}`} className={styles.explore}>
+                <a href={`https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(item.title)}`} target="_blank" rel="noopener noreferrer" className={styles.explore}>
                   Discover Collection
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}

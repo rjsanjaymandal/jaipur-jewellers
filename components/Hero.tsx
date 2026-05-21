@@ -101,7 +101,7 @@ const Hero = () => {
                 transition={{ delay: 0.8, duration: 0.8 }}
                 className={styles.ctaWrapper}
               >
-                <button className="luxury-button">Discover Collections</button>
+                <button className="luxury-button" onClick={() => window.open('https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20your%20jewellery%20collections', '_blank')}>Discover Collections</button>
               </motion.div>
             </div>
           </div>
