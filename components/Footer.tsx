@@ -5,7 +5,7 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.logoContainer}>
@@ -13,16 +13,16 @@ const Footer = () => {
                 <Image 
                   src="/logo_gold_final.png" 
                   alt="Jaipur Jewellers Logo" 
-                  width={200} 
-                  height={68}
+                  width={180} 
+                  height={60}
                   className={styles.logoImage}
                 />
               </Link>
             </div>
             <p className={styles.tagline}>A Legacy of Trust Since 1996.</p>
             <div className={styles.socials}>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <a href="https://instagram.com/jaipurjewellers" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://facebook.com/jaipurjewellers" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
             </div>
           </div>
           
@@ -33,7 +33,7 @@ const Footer = () => {
                   <p>SCO 105, Sector 35C INNER MARKET</p>
                   <p>CHANDIGARH</p>
               </div>
-              <p className={styles.phone}>T: +91 90561 49264</p>
+              <a href="tel:+919056149264" className={styles.phone}>+91 90561 49264</a>
             </div>
             
             <div className={styles.linkGroup}>
@@ -46,6 +46,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
+        <div className={styles.divider} />
         
         <div className={styles.bottom}>
           <p>&copy; 2026 Jaipur Jewellers. All rights reserved.</p>
