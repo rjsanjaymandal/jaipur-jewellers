@@ -5,9 +5,9 @@ import Image from 'next/image';
 import styles from './GoldShowcase.module.css';
 
 const collections = [
-  { id: 1, label: 'Gold Necklace', image: '/gold_necklace.png', alt: '22K Gold Necklace Collection - Traditional & Contemporary Designs' },
-  { id: 2, label: 'Gold Earring', image: '/gold_earring.png', alt: 'Gold Earrings - Jhumka, Chandbali & Stud Designs' },
-  { id: 4, label: 'Gold Ring', image: '/gold_ring.png', alt: 'Gold Rings for Every Occasion - Daily Wear to Wedding' },
+  { id: 1, label: 'Gold Necklace', image: '/gold_necklace_new.jpg', alt: '22K Gold Necklace Collection - Traditional & Contemporary Designs' },
+  { id: 2, label: 'Gold Earring', image: '/gold_earring_new.jpg', alt: 'Gold Earrings - Jhumka, Chandbali & Stud Designs' },
+  { id: 4, label: 'Gold Ring', image: '/gold_ring_new.jpg', alt: 'Gold Rings for Every Occasion - Daily Wear to Wedding' },
 ];
 
 const GoldShowcase = () => {
@@ -15,6 +15,8 @@ const GoldShowcase = () => {
     <section className={styles.section} aria-labelledby="gold-heading">
       <div className={styles.header}>
         <h2 id="gold-heading" className={styles.title}>Gold Jewellery</h2>
+        <div className={styles.titleAccent} />
+        <p className={styles.subtitle}>Pure luxury crafted with heritage</p>
       </div>
       
       <div className={styles.grid}>
@@ -39,6 +41,9 @@ const GoldShowcase = () => {
                   className={styles.image} 
                   style={{ objectFit: 'cover' }} 
                 />
+                <div className={styles.cardLabel}>
+                  <span>Enquire Now</span>
+                </div>
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>

@@ -1,21 +1,20 @@
 :root {
-  --background: #FDFBF7;      /* Silky Champagne Ivory - luxury boutique feel */
-  --foreground: #360105;      /* Ultra-deep Mahogany-Burgundy for ultimate crisp readability */
-  --primary: #C5A059;         /* Sophisticated Champagne Satin Gold - warm, elegant, non-harsh */
-  --primary-light: #F7EAD7;   /* Soft gold wash */
-  --secondary: #9E7D5A;       /* Warm Jaipur Copper-Gold */
-  --beige-light: #FAF6EE;     /* Soft ivory linen */
+  --background: #FDFBF7;
+  --foreground: #360105;
+  --primary: #C5A059;
+  --primary-light: #F7EAD7;
+  --secondary: #9E7D5A;
+  --beige-light: #FAF6EE;
   --ivory: #FFFDF9;
   --blush: #FAF5EE;
   --blush-dark: #FAF0E4;
   --white: #FFFFFF;
   --black: #000000;
-  
-  /* Themed Royal Velvet Crimson System */
-  --crimson-deep: #4D0209;    /* Core deep Jaipur velvet crimson, luxurious wine-red backdrop */
-  --crimson-royal: #6D0B16;   /* Rich royal crimson highlight */
-  --crimson-dark: #2F0104;    /* Midnight mahogany wine */
-  --crimson-blush: #FDFBF7;   /* Base body background */
+
+  --crimson-deep: #4D0209;
+  --crimson-royal: #6D0B16;
+  --crimson-dark: #2F0104;
+  --crimson-blush: #FDFBF7;
 
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   --section-padding: 80px 4%;
@@ -63,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Custom Utilities */
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -72,23 +70,41 @@ h1, h2, h3, h4, h5, h6 {
 
 .luxury-button {
   display: inline-block;
-  padding: 15px 40px;
-  background-color: var(--primary);
+  padding: 16px 44px;
+  background: linear-gradient(135deg, var(--primary) 0%, #B8860B 100%);
   color: var(--white);
   border: none;
   font-family: inherit;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
   cursor: pointer;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3);
+}
+
+.luxury-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.6s ease;
 }
 
 .luxury-button:hover {
-  background-color: var(--foreground);
-  letter-spacing: 3px;
+  background: linear-gradient(135deg, var(--foreground) 0%, #4D0209 100%);
+  letter-spacing: 4px;
+  box-shadow: 0 6px 25px rgba(54, 1, 5, 0.3);
+  transform: translateY(-2px);
+}
+
+.luxury-button:hover::before {
+  left: 100%;
 }
 
 .sr-only {
@@ -101,4 +117,26 @@ h1, h2, h3, h4, h5, h6 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.section-title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--foreground);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 4%;
+  }
 }

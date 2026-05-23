@@ -15,6 +15,8 @@ const DiamondShowcase = () => {
     <section className={styles.section} aria-labelledby="diamond-heading">
       <div className={styles.header}>
         <h2 id="diamond-heading" className={styles.title}>Diamond Jewellery</h2>
+        <div className={styles.titleAccent} />
+        <p className={styles.subtitle}>Timeless brilliance captured in every cut</p>
       </div>
       
       <div className={styles.grid}>
@@ -32,6 +34,9 @@ const DiamondShowcase = () => {
             <div className={styles.card}>
               <div className={styles.imageOverlay}>
                 <Image src={item.image} alt={item.alt} width={400} height={500} className={styles.image} style={{ objectFit: 'cover' }} />
+                <div className={styles.cardLabel}>
+                  <span>Enquire Now</span>
+                </div>
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>

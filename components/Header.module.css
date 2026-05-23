@@ -11,40 +11,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 5%;
+  padding: 8px 5%;
   background: transparent;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-}
-
-.searchContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-}
-
-.searchInput {
-  background: none;
-  border: none;
-  border-bottom: 1px solid transparent;
-  padding: 5px;
-  font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.75rem;
-  width: 200px;
-  transition: var(--transition-smooth);
-  outline: none;
-  color: var(--foreground);
-}
-
-.searchInput::placeholder {
-  color: rgba(54, 1, 5, 0.4);
-}
-
-.searchInput:focus {
-  border-bottom: 1px solid var(--primary);
-  width: 250px;
 }
 
 .logoContainer {
@@ -58,16 +29,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 0;
-  filter: brightness(1.1);
+  padding: 2px 0;
 }
 
 .logoImage {
-  max-height: 72px;
+  max-height: 65px;
   width: auto;
   object-fit: contain;
   transition: var(--transition-smooth);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .logoImage:hover {
@@ -75,30 +45,11 @@
   filter: brightness(1.05) drop-shadow(0 4px 10px rgba(197, 160, 89, 0.25));
 }
 
-.utility {
-  position: absolute;
-  right: 5%;
-  display: flex;
-  gap: 20px;
-}
-
-.utilityLink {
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: var(--foreground);
-}
-
-.utilityLink:hover {
-  color: var(--primary);
-}
-
 .nav {
   background: linear-gradient(180deg, var(--ivory) 0%, var(--beige-light) 100%);
   border-top: 1px solid rgba(212, 175, 55, 0.25);
   border-bottom: 1px solid rgba(212, 175, 55, 0.4);
-  padding: 10px 0;
+  padding: 8px 0;
   width: 100%;
 }
 
@@ -120,7 +71,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px 4px;
+  padding: 6px 4px;
   position: relative;
   transition: var(--transition-smooth);
   white-space: nowrap;
@@ -145,71 +96,13 @@
   width: 100%;
 }
 
-.rateWrapper {
-  position: relative;
-}
-
-.rateDropdown {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--crimson-dark);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  padding: 20px;
-  min-width: 220px;
-  z-index: 1001;
-  border: 1px solid var(--primary);
-  margin-top: 12px;
-  border-radius: 4px;
-}
-
-.rateInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.8rem;
-  color: var(--primary-light);
-}
-
-.rateInfo span {
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-  padding-bottom: 6px;
-}
-
-.rateInfo span:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.iconButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--foreground);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (max-width: 1024px) {
   .topBar {
-    padding: 8px 4%;
+    padding: 6px 4%;
   }
   
   .logoImage {
-    max-height: 55px;
-  }
-
-  .utility {
-    position: static;
-    gap: 12px;
-  }
-
-  .utilityLink {
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    max-height: 50px;
   }
   
   .nav {
@@ -235,7 +128,7 @@
   }
 
   .navLink {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 1px;
     white-space: nowrap;
     padding: 12px 0;
@@ -250,34 +143,12 @@
   .topBar {
     flex-direction: row;
     gap: 10px;
-    padding: 6px 16px;
+    padding: 4px 16px;
     align-items: center;
   }
   
   .logoImage {
-    max-height: 40px;
-  }
-  
-  .searchContainer {
-    display: none;
-  }
-  
-  .utility {
-    position: static;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    width: auto;
-    margin-top: 0;
-  }
-  
-  .utilityLink {
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-    padding: 4px 8px;
-    border: 1px solid rgba(212, 175, 55, 0.15);
-    border-radius: 4px;
-    background-color: rgba(212, 175, 55, 0.05);
+    max-height: 38px;
   }
   
   .nav {
@@ -293,7 +164,7 @@
   }
 
   .navLink {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     letter-spacing: 0.5px;
     padding: 10px 0;
   }
