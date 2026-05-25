@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
+import PriceTicker from './PriceTicker';
 
 const navItems = [
   { label: 'DIAMOND', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Diamond%20Jewellery' },
@@ -17,6 +18,7 @@ const navItems = [
 const Header = () => {
   return (
     <header className={styles.header}>
+      <PriceTicker />
       <div className={styles.topBar}>
         <div className={styles.logoContainer}>
             <Link href="/" className={styles.logoLink}>

@@ -1,12 +1,12 @@
 .section {
   position: relative;
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 5%;
+  padding: 110px 5%;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--white) 0%, var(--background) 100%);
+  background: linear-gradient(180deg, var(--white) 0%, #FCFAF6 100%);
 }
 
 .background {
@@ -16,7 +16,9 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  transition: opacity 0.8s ease;
 }
 
 .background img {
@@ -28,54 +30,56 @@
 .content {
   position: relative;
   z-index: 2;
-  max-width: 1000px;
+  max-width: 1050px;
   text-align: center;
 }
 
 .headerSection {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .eyebrow {
   display: block;
   font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: 6px;
-  font-size: 0.7rem;
+  letter-spacing: 7px;
+  font-size: 0.72rem;
   color: var(--primary);
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   color: var(--foreground);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-family: var(--font-playfair), serif;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .line {
-  width: 60px;
+  width: 70px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary) 30%, var(--primary) 70%, transparent 100%);
   margin: 0 auto;
 }
 
 .mainContent {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 45px;
 }
 
 .intro {
   font-family: var(--font-playfair), serif;
-  font-size: 1.3rem;
+  font-size: 1.34rem;
   font-style: italic;
   color: var(--foreground);
   line-height: 1.8;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 .timeline {
@@ -83,8 +87,9 @@
   justify-content: center;
   align-items: flex-start;
   gap: 0;
-  padding: 40px 0;
+  padding: 45px 0;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .timelineItem {
@@ -92,25 +97,30 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 0 30px;
+  padding: 0 35px;
+  flex: 1 1 180px;
+  max-width: 220px;
+  transition: transform 0.4s ease;
 }
 
 .timelineItem:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 16px;
-  left: calc(50% + 25px);
-  width: calc(100% - 50px);
-  height: 1px;
-  background: linear-gradient(90deg, var(--primary), rgba(212, 175, 55, 0.2));
+  left: calc(50% + 28px);
+  width: calc(100% - 56px);
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(197, 160, 89, 0.2) 100%);
+  z-index: 1;
 }
 
 .year {
   font-family: var(--font-playfair), serif;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 750;
   color: var(--primary);
   margin-bottom: 12px;
+  transition: var(--transition-fast);
 }
 
 .timelineDot {
@@ -119,24 +129,36 @@
   background-color: var(--primary);
   border-radius: 50%;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 0 5px rgba(197, 160, 89, 0.16);
   transition: var(--transition-smooth);
+  border: 2px solid var(--white);
+  z-index: 2;
+}
+
+.timelineItem:hover {
+  transform: translateY(-4px);
+}
+
+.timelineItem:hover .year {
+  color: var(--foreground);
+  transform: scale(1.08);
 }
 
 .timelineItem:hover .timelineDot {
-  box-shadow: 0 0 0 8px rgba(212, 175, 55, 0.25);
-  transform: scale(1.1);
+  box-shadow: 0 0 0 9px rgba(197, 160, 89, 0.32);
+  background-color: var(--foreground);
+  transform: scale(1.15);
 }
 
 .timelineContent {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .timelineLabel {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   color: var(--foreground);
@@ -145,49 +167,63 @@
 
 .timelineDesc {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--secondary);
   letter-spacing: 0.5px;
+  line-height: 1.4;
 }
 
 .text {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 2;
   color: var(--secondary);
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
   font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .timelineItem {
+    padding: 0 20px;
+    flex: 1 1 150px;
+  }
+  .timelineItem:not(:last-child)::after {
+    left: calc(50% + 20px);
+    width: calc(100% - 40px);
+  }
 }
 
 @media (max-width: 768px) {
   .section {
     min-height: auto;
-    padding: 60px 4%;
+    padding: 70px 4%;
   }
 
   .title {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    margin-bottom: 20px;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin-bottom: 18px;
   }
 
   .eyebrow {
-    font-size: 0.6rem;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
   }
 
   .headerSection {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 
   .timeline {
-    gap: 30px;
-    padding: 20px 0;
+    gap: 35px;
+    padding: 25px 0;
+    justify-content: center;
   }
 
   .timelineItem {
     padding: 0 15px;
+    flex: 0 1 160px;
   }
 
   .timelineItem:not(:last-child)::after {
@@ -195,7 +231,7 @@
   }
 
   .year {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .timelineDot {
@@ -205,11 +241,12 @@
   }
 
   .intro {
-    font-size: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
   }
 
   .text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.8;
   }
 }
@@ -218,11 +255,12 @@
   .timeline {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
   }
 
   .timelineItem {
     width: 100%;
-    max-width: 200px;
+    max-width: 240px;
+    flex: none;
   }
 }

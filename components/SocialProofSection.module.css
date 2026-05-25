@@ -1,6 +1,18 @@
 .section {
-  padding: var(--section-padding);
-  background: linear-gradient(180deg, var(--background) 0%, var(--white) 100%);
+  padding: 90px 4%;
+  background: linear-gradient(180deg, #FCFAF6 0%, var(--white) 100%);
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.18) 0%, transparent 85%);
 }
 
 .testimonialContainer {
@@ -8,41 +20,36 @@
   margin: 0 auto;
 }
 
-.grid {
-  display: flex;
-  gap: 80px;
-  align-items: flex-start;
-}
-
-.testimonialsSide, .igSide {
-  flex: 1;
-}
-
 .eyebrow {
   display: block;
   font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: 5px;
-  font-size: 0.7rem;
+  letter-spacing: 6px;
+  font-size: 0.72rem;
   color: var(--primary);
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  font-weight: 550;
+  text-align: center;
 }
 
 .title {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   color: var(--foreground);
   margin-bottom: 40px;
+  font-family: var(--font-playfair), serif;
   font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .sliderContainer {
   position: relative;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 .sliderTrack {
-  min-height: 200px;
+  min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,35 +59,54 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
-  padding: 50px 40px;
-  background: linear-gradient(135deg, var(--white) 0%, var(--background) 100%);
+  padding: 55px 50px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   position: relative;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.06);
-  border: 1px solid rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 15px 45px rgba(58, 2, 7, 0.04);
+  border: 1px solid rgba(197, 160, 89, 0.18);
+  transition: var(--transition-smooth);
 }
 
 .testimonialCard::before {
-  content: '"';
+  content: '“';
   position: absolute;
   top: 15px;
-  left: 25px;
-  font-size: 100px;
+  left: 30px;
+  font-size: 130px;
   font-family: var(--font-playfair), serif;
   color: var(--primary);
-  opacity: 0.1;
+  opacity: 0.14;
   line-height: 1;
   pointer-events: none;
 }
 
+.testimonialCard::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.08);
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(197, 160, 89, 0.12);
+  border-color: rgba(197, 160, 89, 0.32);
+}
+
 .quote {
   font-family: var(--font-playfair), serif;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-style: italic;
-  line-height: 1.9;
+  line-height: 1.95;
   color: var(--foreground);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
+  font-weight: 500;
 }
 
 .authorInfo {
@@ -88,110 +114,64 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .authorInfo::before {
   content: '';
   display: block;
-  width: 35px;
-  height: 2px;
-  background: var(--primary);
-  margin-bottom: 15px;
+  width: 40px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--primary) 30%, var(--primary) 70%, transparent 100%);
+  margin-bottom: 16px;
 }
 
 .author {
   font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   letter-spacing: 1px;
   color: var(--foreground);
+  text-transform: uppercase;
 }
 
 .role {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--secondary);
   text-transform: uppercase;
-  margin-top: 6px;
-  letter-spacing: 1.5px;
+  margin-top: 5px;
+  letter-spacing: 2px;
 }
 
 .dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 30px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(212, 175, 55, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background-color: rgba(197, 160, 89, 0.16);
+  border: 1px solid rgba(197, 160, 89, 0.25);
   cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 0;
+  transition: var(--transition-smooth);
 }
 
 .dot:hover {
-  background-color: rgba(212, 175, 55, 0.3);
+  background-color: rgba(197, 160, 89, 0.4);
+  border-color: var(--primary);
 }
 
 .dotActive {
   background-color: var(--primary);
   border-color: var(--primary);
-  transform: scale(1.3);
-}
-
-.igGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.igItem {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.igItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s ease;
-}
-
-.igOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.6));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.igItem:hover img {
-  transform: scale(1.1);
-}
-
-.igItem:hover .igOverlay {
-  opacity: 1;
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    flex-direction: column;
-    gap: 60px;
-  }
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.55);
 }
 
 @media (max-width: 768px) {
@@ -200,7 +180,7 @@
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 30px;
   }
 
@@ -209,48 +189,50 @@
   }
 
   .sliderTrack {
-    min-height: 160px;
+    min-height: 190px;
   }
 
   .testimonialCard {
-    padding: 35px 20px;
-    margin: 0 12px;
+    padding: 40px 25px;
+    margin: 0 10px;
   }
 
   .testimonialCard::before {
-    font-size: 70px;
+    font-size: 90px;
     top: 10px;
-    left: 15px;
+    left: 20px;
   }
 
   .quote {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.08rem;
+    line-height: 1.75;
   }
 
   .author {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
   }
 
   .role {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 
   .testimonialCard {
-    padding: 25px 16px;
+    padding: 30px 18px;
   }
 
   .testimonialCard::before {
-    font-size: 50px;
+    font-size: 70px;
+    left: 12px;
   }
 
   .quote {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
