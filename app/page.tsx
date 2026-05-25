@@ -8,6 +8,7 @@ import GoldShowcase from "../components/GoldShowcase";
 
 import CraftsmanshipSection from "../components/CraftsmanshipSection";
 import SocialProofSection from "../components/SocialProofSection";
+import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       
       <CraftsmanshipSection />
       <SocialProofSection />
+      <FAQ />
       <Footer />
     </>
   );
