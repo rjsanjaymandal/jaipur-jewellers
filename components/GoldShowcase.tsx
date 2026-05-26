@@ -23,10 +23,10 @@ const GoldShowcase = () => {
         <div className={styles.titleAccent} />
         <p className={styles.subtitle}>Pure luxury crafted with heritage</p>
       </div>
-      
+
       <div className={styles.grid}>
         {collections.map((item, index) => (
-          <motion.div 
+          <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,12 +37,12 @@ const GoldShowcase = () => {
             style={{ cursor: 'pointer' }}
           >
             <div className={styles.imageWrapper}>
-              <Image 
-                src={item.image} 
-                alt={item.alt} 
-                width={400} 
-                height={500} 
-                className={styles.image} 
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={400}
+                height={500}
+                className={styles.image}
               />
               <div className={styles.labelOverlay}>
                 <span>Enquire Now</span>
