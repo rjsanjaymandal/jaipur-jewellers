@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Silver Necklace", image: "/gold_necklace_new.jpg", alt: "Silver Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Silver Earrings", image: "/gold_earring_new.jpg", alt: "Silver Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Silver Ring", image: "/gold_ring_new.jpg", alt: "Silver Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Silver Necklace V2", image: "/diamond_necklace_new.jpg", alt: "Silver Necklace Design - Jaipur Jewellers" },
-  { name: "Silver Earrings V2", image: "/diamond_earring_new.jpg", alt: "Silver Earrings Design - Jaipur Jewellers" },
-  { name: "Silver Ring V2", image: "/diamond_ring_new.jpg", alt: "Silver Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/gold_necklace_new.jpg", alt: "Silver Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/gold_earring_new.jpg", alt: "Silver Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/gold_ring_new.jpg", alt: "Silver Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/diamond_necklace_new.jpg", alt: "Silver Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/diamond_earring_new.jpg", alt: "Silver Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Bangle", image: "/diamond_ring_new.jpg", alt: "Silver Bangle - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

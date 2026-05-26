@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Kundan Necklace", image: "/diamond_necklace_new.jpg", alt: "Kundan Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Kundan Earrings", image: "/diamond_earring_new.jpg", alt: "Kundan Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Kundan Ring", image: "/diamond_ring_new.jpg", alt: "Kundan Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Kundan Necklace V2", image: "/gold_necklace_new.jpg", alt: "Kundan Necklace Design - Jaipur Jewellers" },
-  { name: "Kundan Earrings V2", image: "/gold_earring_new.jpg", alt: "Kundan Earrings Design - Jaipur Jewellers" },
-  { name: "Kundan Ring V2", image: "/gold_ring_new.jpg", alt: "Kundan Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/diamond_necklace_new.jpg", alt: "Kundan Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/diamond_earring_new.jpg", alt: "Kundan Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/diamond_ring_new.jpg", alt: "Kundan Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/gold_necklace_new.jpg", alt: "Kundan Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/gold_earring_new.jpg", alt: "Kundan Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Mangalsutra", image: "/gold_ring_new.jpg", alt: "Kundan Mangalsutra - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

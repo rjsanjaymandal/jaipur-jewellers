@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Italian Necklace", image: "/diamond_necklace_new.jpg", alt: "Italian Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Italian Earrings", image: "/diamond_earring_new.jpg", alt: "Italian Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Italian Ring", image: "/diamond_ring_new.jpg", alt: "Italian Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Italian Necklace V2", image: "/gold_necklace_new.jpg", alt: "Italian Necklace Design - Jaipur Jewellers" },
-  { name: "Italian Earrings V2", image: "/gold_earring_new.jpg", alt: "Italian Earrings Design - Jaipur Jewellers" },
-  { name: "Italian Ring V2", image: "/gold_ring_new.jpg", alt: "Italian Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/diamond_necklace_new.jpg", alt: "Italian Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/diamond_earring_new.jpg", alt: "Italian Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/diamond_ring_new.jpg", alt: "Italian Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/gold_necklace_new.jpg", alt: "Italian Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/gold_earring_new.jpg", alt: "Italian Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Mangalsutra", image: "/gold_ring_new.jpg", alt: "Italian Mangalsutra - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

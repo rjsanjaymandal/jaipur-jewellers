@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Jadau Necklace", image: "/diamond_necklace_new.jpg", alt: "Jadau Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Jadau Earrings", image: "/diamond_earring_new.jpg", alt: "Jadau Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Jadau Ring", image: "/diamond_ring_new.jpg", alt: "Jadau Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Jadau Necklace V2", image: "/gold_necklace_new.jpg", alt: "Jadau Necklace Design - Jaipur Jewellers" },
-  { name: "Jadau Earrings V2", image: "/gold_earring_new.jpg", alt: "Jadau Earrings Design - Jaipur Jewellers" },
-  { name: "Jadau Ring V2", image: "/gold_ring_new.jpg", alt: "Jadau Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/diamond_necklace_new.jpg", alt: "Jadau Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/diamond_earring_new.jpg", alt: "Jadau Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/diamond_ring_new.jpg", alt: "Jadau Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/gold_necklace_new.jpg", alt: "Jadau Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/gold_earring_new.jpg", alt: "Jadau Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Mangalsutra", image: "/gold_ring_new.jpg", alt: "Jadau Mangalsutra - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

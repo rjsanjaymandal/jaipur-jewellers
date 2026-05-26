@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Gold Necklace", image: "/gold_necklace_new.jpg", alt: "Gold Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Gold Earrings", image: "/gold_earring_new.jpg", alt: "Gold Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Gold Ring", image: "/gold_ring_new.jpg", alt: "Gold Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Gold Necklace V2", image: "/gold_necklace_v2.jpg", alt: "Gold Necklace Design - Jaipur Jewellers" },
-  { name: "Gold Earrings V2", image: "/gold_earring_v2.jpg", alt: "Gold Earrings Design - Jaipur Jewellers" },
-  { name: "Gold Ring V2", image: "/gold_ring_v2.jpg", alt: "Gold Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/gold_necklace_new.jpg", alt: "Gold Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/gold_earring_new.jpg", alt: "Gold Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/gold_ring_new.jpg", alt: "Gold Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/gold_necklace_v2.jpg", alt: "Gold Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/gold_earring_v2.jpg", alt: "Gold Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Bangle", image: "/gold_bangle.png", alt: "Gold Bangles - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

@@ -6,12 +6,12 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Polki Necklace", image: "/diamond_necklace_new.jpg", alt: "Polki Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Polki Earrings", image: "/diamond_earring_new.jpg", alt: "Polki Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Polki Ring", image: "/diamond_ring_new.jpg", alt: "Polki Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Polki Necklace V2", image: "/gold_necklace_new.jpg", alt: "Polki Necklace Design - Jaipur Jewellers" },
-  { name: "Polki Earrings V2", image: "/gold_earring_new.jpg", alt: "Polki Earrings Design - Jaipur Jewellers" },
-  { name: "Polki Ring V2", image: "/gold_ring_new.jpg", alt: "Polki Ring Design - Jaipur Jewellers" },
+  { name: "Necklace", image: "/diamond_necklace_new.jpg", alt: "Polki Necklace - Jaipur Jewellers Chandigarh" },
+  { name: "Earrings", image: "/diamond_earring_new.jpg", alt: "Polki Earrings - Jaipur Jewellers Chandigarh" },
+  { name: "Ring", image: "/diamond_ring_new.jpg", alt: "Polki Ring - Jaipur Jewellers Chandigarh" },
+  { name: "Pendant", image: "/gold_necklace_new.jpg", alt: "Polki Pendant - Jaipur Jewellers" },
+  { name: "Jhumka", image: "/gold_earring_new.jpg", alt: "Polki Jhumka Earrings - Jaipur Jewellers" },
+  { name: "Mangalsutra", image: "/gold_ring_new.jpg", alt: "Polki Mangalsutra - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {
