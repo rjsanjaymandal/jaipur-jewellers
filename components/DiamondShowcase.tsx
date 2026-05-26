@@ -33,7 +33,7 @@ const DiamondShowcase = () => {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ delay: index * 0.12, duration: 0.6 }}
             className={styles.item}
-            onClick={() => window.open(`https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(item.label)}`, '_blank')}
+            onClick={() => window.location.href = '/diamond'}
             style={{ cursor: 'pointer' }}
           >
             <div className={styles.imageWrapper}>

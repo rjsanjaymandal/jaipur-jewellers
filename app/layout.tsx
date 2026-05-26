@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -337,6 +338,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

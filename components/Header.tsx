@@ -6,13 +6,13 @@ import styles from './Header.module.css';
 import PriceTicker from './PriceTicker';
 
 const navItems = [
-  { label: 'DIAMOND', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Diamond%20Jewellery' },
-  { label: 'GOLD', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Gold%20Jewellery' },
-  { label: 'KUNDAN', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Kundan%20Jewellery' },
-  { label: 'JADAU', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Jadau%20Jewellery' },
-  { label: 'ITALIAN', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Italian%20Jewellery' },
-  { label: 'POLKI', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Polki%20Jewellery' },
-  { label: 'SILVER', href: 'https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Silver%20Jewellery' },
+  { label: 'DIAMOND', href: '/diamond' },
+  { label: 'GOLD', href: '/gold' },
+  { label: 'KUNDAN', href: '/kundan' },
+  { label: 'JADAU', href: '/jadau' },
+  { label: 'ITALIAN', href: '/italian' },
+  { label: 'POLKI', href: '/polki' },
+  { label: 'SILVER', href: '/silver' },
 ];
 
 const Header = () => {
@@ -38,9 +38,9 @@ const Header = () => {
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.label} className={styles.navItem}>
-              <a href={item.href} target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+              <Link href={item.href} className={styles.navLink}>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
