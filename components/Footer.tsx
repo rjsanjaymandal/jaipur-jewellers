@@ -39,9 +39,7 @@ const Footer = () => {
               <h3>Collections</h3>
               <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Diamond%20Jewellery" target="_blank" rel="noopener noreferrer">Diamond</a>
               <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Gold%20Jewellery" target="_blank" rel="noopener noreferrer">Gold</a>
-              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Jadau%20Jewellery" target="_blank" rel="noopener noreferrer">Jadau</a>
-              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Polki%20Jewellery" target="_blank" rel="noopener noreferrer">Polki</a>
-              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Kundan%20Jewellery" target="_blank" rel="noopener noreferrer">Kundan</a>
+              <a href="https://wa.me/919056149264?text=Hi%2C%20I%20am%20interested%20in%20Silver%20Jewellery" target="_blank" rel="noopener noreferrer">Silver</a>
             </div>
           </div>
         </div>

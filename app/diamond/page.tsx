@@ -6,12 +6,10 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Necklace", image: "/diamond_necklace_new.jpg", alt: "Diamond Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Earrings", image: "/diamond_earring_new.jpg", alt: "Diamond Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Ring", image: "/diamond_ring_new.jpg", alt: "Diamond Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Pendant", image: "/diamond_necklace_v2.jpg", alt: "Diamond Pendant - Jaipur Jewellers" },
-  { name: "Jhumka", image: "/diamond_earring_v2.jpg", alt: "Diamond Jhumka Earrings - Jaipur Jewellers" },
-  { name: "Mangalsutra", image: "/diamond_mangalsutra.jpg", alt: "Diamond Mangalsutra - Jaipur Jewellers" },
+  { name: "Diamond Necklace Set", image: "/diamond_necklace_pendant_v3.png", alt: "Elegant Double-Layered Diamond Pendant Necklace - Jaipur Jewellers" },
+  { name: "Diamond Necklace Set", image: "/diamond_emerald_set_v3.png", alt: "Symmetrical Emerald and Diamond Necklace Set - Jaipur Jewellers" },
+  { name: "Diamond Necklace Set", image: "/diamond_teardrop_set_v3.png", alt: "Traditional Tear-Drop Diamond Necklace Set - Jaipur Jewellers" },
+  { name: "Diamond Necklace Set", image: "/diamond_ruby_set_v3.png", alt: "Luxury Ruby and Diamond Necklace Set - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

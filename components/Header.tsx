@@ -8,10 +8,6 @@ import PriceTicker from './PriceTicker';
 const navItems = [
   { label: 'DIAMOND', href: '/diamond' },
   { label: 'GOLD', href: '/gold' },
-  { label: 'KUNDAN', href: '/kundan' },
-  { label: 'JADAU', href: '/jadau' },
-  { label: 'ITALIAN', href: '/italian' },
-  { label: 'POLKI', href: '/polki' },
   { label: 'SILVER', href: '/silver' },
 ];
 
