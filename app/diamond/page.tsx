@@ -10,6 +10,14 @@ const products = [
   { name: "Diamond Necklace Set", image: "/diamond_emerald_set_v3.png", alt: "Symmetrical Emerald and Diamond Necklace Set - Jaipur Jewellers" },
   { name: "Diamond Necklace Set", image: "/diamond_teardrop_set_v3.png", alt: "Traditional Tear-Drop Diamond Necklace Set - Jaipur Jewellers" },
   { name: "Diamond Necklace Set", image: "/diamond_ruby_set_v3.png", alt: "Luxury Ruby and Diamond Necklace Set - Jaipur Jewellers" },
+  { name: "Diamond Ring", image: "/diamond_ring_floral_v3.png", alt: "Brilliant Floral Halo Diamond Ring - Jaipur Jewellers" },
+  { name: "Diamond Ring", image: "/diamond_ring_filigree_v3.png", alt: "Exclusive Handcrafted Filigree Diamond Ring - Jaipur Jewellers" },
+  { name: "Diamond Ring", image: "/diamond_ring_rhombus_v3.png", alt: "Modern Geometric Rhombus Diamond Ring - Jaipur Jewellers" },
+  { name: "Diamond Ring", image: "/diamond_ring_cluster_v3.png", alt: "Premium Intersecting Cluster Diamond Ring - Jaipur Jewellers" },
+  { name: "Diamond Earrings", image: "/diamond_earring_floral_v3.jpg", alt: "Traditional Floral Cluster Diamond Stud Earrings - Jaipur Jewellers" },
+  { name: "Diamond Earrings", image: "/diamond_earring_clover_v3.png", alt: "Three-Petal Gold Diamond Stud Clover Earrings - Jaipur Jewellers" },
+  { name: "Diamond Earrings", image: "/diamond_earring_sapphire_v3.jpg", alt: "Exclusive Sapphire and Diamond Stud Earrings - Jaipur Jewellers" },
+  { name: "Diamond Earrings", image: "/diamond_earring_filigree_v3.jpg", alt: "Elegant Gold Filigree Circular Diamond Earrings - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

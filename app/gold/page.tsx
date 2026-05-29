@@ -6,12 +6,14 @@ import FAQ from "../../components/FAQ";
 import styles from "./page.module.css";
 
 const products = [
-  { name: "Necklace", image: "/gold_necklace_new.jpg", alt: "Gold Necklace - Jaipur Jewellers Chandigarh" },
-  { name: "Earrings", image: "/gold_earring_new.jpg", alt: "Gold Earrings - Jaipur Jewellers Chandigarh" },
-  { name: "Ring", image: "/gold_ring_new.jpg", alt: "Gold Ring - Jaipur Jewellers Chandigarh" },
-  { name: "Pendant", image: "/gold_necklace_v2.jpg", alt: "Gold Pendant - Jaipur Jewellers" },
-  { name: "Jhumka", image: "/gold_earring_v2.jpg", alt: "Gold Jhumka Earrings - Jaipur Jewellers" },
-  { name: "Bangle", image: "/gold_bangle.png", alt: "Gold Bangles - Jaipur Jewellers" },
+  { name: "Traditional Gold Ring", image: "/gold_ring_navaratna_v3.png", alt: "Traditional Navaratna Nine-Gem Gold Ring - Jaipur Jewellers" },
+  { name: "Traditional Gold Ring", image: "/gold_ring_ruby_v3.png", alt: "Antique Gold Floral Ruby Cocktail Ring - Jaipur Jewellers" },
+  { name: "Traditional Gold Ring", image: "/gold_ring_emerald_v3.jpg", alt: "Intricate Gold Floral Emerald Cocktail Ring - Jaipur Jewellers" },
+  { name: "Gold Coin", image: "/gold_coin_augmont_v3.png", alt: "Augmont 1gm 24K Fine Gold Coin - Jaipur Jewellers" },
+  { name: "Gold Coin", image: "/gold_coin_kundan_v3.png", alt: "Kundan 2g and 0.50g Fine Gold Coin 999.9 - Jaipur Jewellers" },
+  { name: "Gold Coin", image: "/gold_coin_lakshmi_v3.png", alt: "MMTC-PAMP Lakshmi 8g 24K Purest Gold Coin - Jaipur Jewellers" },
+  { name: "Gold Earrings", image: "/gold_earrings_ruby_v3.png", alt: "Traditional Gold Stud Earrings with Ruby Center - Jaipur Jewellers" },
+  { name: "Gold Earrings", image: "/gold_earrings_emerald_v3.jpg", alt: "Antique Gold Jhumka Earrings with Emerald Drops - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {
