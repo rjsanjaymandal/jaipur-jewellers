@@ -9,11 +9,15 @@ const products = [
   { name: "Traditional Gold Ring", image: "/gold_ring_navaratna_v3.png", alt: "Traditional Navaratna Nine-Gem Gold Ring - Jaipur Jewellers" },
   { name: "Traditional Gold Ring", image: "/gold_ring_ruby_v3.png", alt: "Antique Gold Floral Ruby Cocktail Ring - Jaipur Jewellers" },
   { name: "Traditional Gold Ring", image: "/gold_ring_emerald_v3.jpg", alt: "Intricate Gold Floral Emerald Cocktail Ring - Jaipur Jewellers" },
+  { name: "Gold Earrings", image: "/gold_earrings_ruby_v3.png", alt: "Traditional Gold Stud Earrings with Ruby Center - Jaipur Jewellers" },
+  { name: "Gold Earrings", image: "/gold_earrings_emerald_v3.jpg", alt: "Antique Gold Jhumka Earrings with Emerald Drops - Jaipur Jewellers" },
+  { name: "Gold Necklace", image: "/gold_necklace_pearl_teardrop_v3.png", alt: "Multi-Strand Pearl Gold Necklace with Diamond-Studded Teardrop Pendant - Jaipur Jewellers" },
+  { name: "Gold Necklace", image: "/gold_necklace_ruby_pearl_v3.png", alt: "Kundan Choker Gold Necklace Set with Ruby Beads and Pearls - Jaipur Jewellers" },
+  { name: "Gold Necklace", image: "/gold_necklace_sapphire_pearl_v3.png", alt: "Royal Sapphire Choker Gold Necklace Set with Pearls - Jaipur Jewellers" },
+  { name: "Gold Necklace", image: "/gold_necklace_emerald_pearl_v3.jpg", alt: "Traditional Flower Motif Kundan Gold Necklace Set with Green Emerald Beads and Pearls - Jaipur Jewellers" },
   { name: "Gold Coin", image: "/gold_coin_augmont_v3.png", alt: "Augmont 1gm 24K Fine Gold Coin - Jaipur Jewellers" },
   { name: "Gold Coin", image: "/gold_coin_kundan_v3.png", alt: "Kundan 2g and 0.50g Fine Gold Coin 999.9 - Jaipur Jewellers" },
   { name: "Gold Coin", image: "/gold_coin_lakshmi_v3.png", alt: "MMTC-PAMP Lakshmi 8g 24K Purest Gold Coin - Jaipur Jewellers" },
-  { name: "Gold Earrings", image: "/gold_earrings_ruby_v3.png", alt: "Traditional Gold Stud Earrings with Ruby Center - Jaipur Jewellers" },
-  { name: "Gold Earrings", image: "/gold_earrings_emerald_v3.jpg", alt: "Antique Gold Jhumka Earrings with Emerald Drops - Jaipur Jewellers" },
 ];
 
 export const metadata: Metadata = {

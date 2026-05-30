@@ -33,8 +33,11 @@ const tickerRates = [
 
 const PriceTicker = () => {
   const [rates, setRates] = useState<Rates>(defaultRates);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const fetchRates = async () => {
       try {
         const res = await fetch('/api/prices');
@@ -51,6 +54,14 @@ const PriceTicker = () => {
     const interval = setInterval(fetchRates, 120000);
     return () => clearInterval(interval);
   }, []);
+
+  if (!mounted) {
+    return (
+      <div className={styles.tickerWrapper}>
+        <div className={styles.ticker} style={{ opacity: 0 }} />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.tickerWrapper} suppressHydrationWarning>

@@ -33,7 +33,17 @@ const GoldShowcase = () => {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ delay: index * 0.12, duration: 0.6 }}
             className={styles.item}
-            onClick={() => window.location.href = '/gold'}
+            onClick={() => {
+              if (item.label === 'Gold Necklace') {
+                window.location.href = '/gold-necklaces';
+              } else if (item.label === 'Gold Earring') {
+                window.location.href = '/gold-earrings';
+              } else if (item.label === 'Gold Ring') {
+                window.location.href = '/gold-rings';
+              } else {
+                window.location.href = '/gold';
+              }
+            }}
             style={{ cursor: 'pointer' }}
           >
             <div className={styles.imageWrapper}>

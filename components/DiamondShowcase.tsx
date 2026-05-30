@@ -33,7 +33,17 @@ const DiamondShowcase = () => {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ delay: index * 0.12, duration: 0.6 }}
             className={styles.item}
-            onClick={() => window.location.href = '/diamond'}
+            onClick={() => {
+              if (item.label === 'Diamond Necklace') {
+                window.location.href = '/diamond-necklaces';
+              } else if (item.label === 'Diamond Earring') {
+                window.location.href = '/diamond-earrings';
+              } else if (item.label === 'Diamond Ring') {
+                window.location.href = '/diamond-rings';
+              } else {
+                window.location.href = '/diamond';
+              }
+            }}
             style={{ cursor: 'pointer' }}
           >
             <div className={styles.imageWrapper}>
