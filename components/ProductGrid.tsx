@@ -49,7 +49,7 @@ const ProductGrid = ({ category, products }: ProductGridProps) => {
               className={styles.buyBtn}
               onClick={() => handleBuy(product.name)}
             >
-              Buy Now
+              Enquire Now
             </button>
           </div>
         </motion.div>

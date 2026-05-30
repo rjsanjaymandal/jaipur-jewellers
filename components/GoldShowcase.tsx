@@ -55,7 +55,7 @@ const GoldShowcase = () => {
                 className={styles.image}
               />
               <div className={styles.labelOverlay}>
-                <span>Enquire Now</span>
+                <span>View Collection</span>
               </div>
             </div>
             <span className={styles.caption}>{item.label}</span>
